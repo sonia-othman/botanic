@@ -4,6 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@theme {
+  --color-primary: #014b26;
+  --color-secondary: #79b610;
+  --color-accent: #fdfaf6;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -22,5 +27,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Kufi Arabic", sans-serif;
 }

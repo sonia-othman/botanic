@@ -1,101 +1,165 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Phone, Home, Calendar, Users, ArrowRight } from 'lucide-react';
-import Link from 'next/link'
+import { Phone, Home, Calendar, Users, ArrowRight, Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { useDirection } from './hooks/useDirection'; 
 
 export default function PrefabHomeLanding() {
+  const { t, i18n } = useTranslation();
+  const { isRTL, direction } = useDirection();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Main Content */}
-      <div className="mx-auto px-4 lg:px-8 pt-10 pb-16 items-center">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-0">
-          {/* Left Section*/}
-          <div className="bg-gray-50 rounded-[40px] p-8 md:p-12 lg:p-14 flex flex-col justify-between min-h-[700px] relative ">
+    <div className="h-full bg-white" dir={direction}>
+      <div className="container mx-auto px-4 sm:px-5 md:px-6 pt-4 pb-14">
+        {/* Grid wrapper */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 items-center">
+
+          {/* LEFT SECTION */}
+          <div
+            className={`bg-accent rounded-[30px] sm:rounded-[40px] p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between relative order-1 lg:order-1 ${isRTL ? 'text-right' : 'text-left'}`}
+          >
             {/* Header */}
-            <div className="flex items-center">
-                <img src="image/logo.png" alt="" className='w-10 mr-15' />
-              <nav className="hidden md:flex gap-8 text-sm text-gray-600">
-                <Link href="/" className="hover:text-gray-900 transition">Home</Link>
-                <Link href="/pricing" className="hover:text-gray-900 transition">Pricing</Link>
-                <Link href="/projects" className="hover:text-gray-900 transition">Projects</Link>
+            <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
+              <Link href="/" className="flex items-center space-x-2">
+                <Image src="/image/botanic.png" alt="Logo" width={80} height={80} priority />
+              </Link>
+
+              {/* Desktop Nav */}
+              <nav className="hidden md:flex gap-8 text-sm text-primary">
+                
+                <Link href="/showroom" className="hover:text-gray-700 transition">{t('pricing')}</Link>
+                <Link href="/gallery" className="hover:text-gray-700 transition">{t('projectsBtn')}</Link>
+                <Link href="/contact" className="hover:text-gray-700 transition">{t('projects')}</Link>
+                <Link href="/about" className="hover:text-gray-700 transition">{t('navbar.aboutUs')}</Link>
               </nav>
-              {/* <select
-          onChange={(e) => i18n.changeLanguage(e.target.value)}
-          value={i18n.language}
-          className='hidden md:block bg-white px-6 py-2 rounded-md'
-        >
-          <option value="ku">Kurdish</option>
-          <option value="en">English</option>
-        </select> */}
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="md:hidden p-2 rounded-md text-primary hover:bg-gray-100 transition"
+              >
+                {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+
+              {/* Language Switcher (Desktop) */}
+              <div className="hidden md:flex gap-2">
+                <button
+                  onClick={() => i18n.changeLanguage('en')}
+                  className="px-3 py-1 text-sm rounded-md text-primary bg-white shadow-sm hover:bg-gray-100"
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => i18n.changeLanguage('ku')}
+                  className="px-3 py-1 text-sm rounded-md text-primary bg-white shadow-sm hover:bg-gray-100"
+                >
+                  کوردی
+                </button>
+              </div>
             </div>
 
-            <div className="space-y-8">
-              <div className="space-y-5">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
-                  Dream Home<br />
-                  Made Easy
+            {/* Mobile Menu */}
+            {menuOpen && (
+              <div className="flex flex-col mt-4 bg-white rounded-xl shadow-md p-4 gap-3 md:hidden">
+                <Link href="/" className="text-primary hover:text-gray-700 transition">{t('home')}</Link>
+                <Link href="/showroom" className="text-primary hover:text-gray-700 transition">{t('pricing')}</Link>
+                <Link href="/gallery" className="text-primary hover:text-gray-700 transition">{t('projectsBtn')}</Link>
+                <Link href="/contact" className="text-primary hover:text-gray-700 transition">{t('projects')}</Link>
+                <div className="flex gap-3 mt-3">
+                  <button
+                    onClick={() => i18n.changeLanguage('en')}
+                    className="flex-1 px-3 py-1 text-sm rounded-md text-primary bg-gray-100 hover:bg-gray-200"
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => i18n.changeLanguage('ku')}
+                    className="flex-1 px-3 py-1 text-sm rounded-md text-primary bg-gray-100 hover:bg-gray-200"
+                  >
+                    کوردی
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Main Content */}
+            <div className="space-y-6 mt-6">
+              <div className="space-y-4">
+                <h1
+                  className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight ${isRTL ? 'text-right' : 'text-left'}`}
+                >
+                  {t('headline1')}<br />{t('headline2')}
                 </h1>
-                <p className="text-gray-600 text-sm md:text-base max-w-md leading-relaxed">
-                  Build Your Dream Home with Our Expert Prefab Solutions - Fast, Affordable, and Tailored to You!
+                <p
+                  className={`text-gray-600 text-sm sm:text-base max-w-md leading-relaxed ${isRTL ? 'text-right' : 'text-left'}`}
+                >
+                  {t('subtitle')}
                 </p>
               </div>
 
-              <Link href="/projects" className="bg-gray-900 text-white px-10 py-4 rounded-full hover:bg-gray-800 transition inline-flex items-center gap-3 group w-fit text-sm">
-                Project
-                <span className="group-hover:translate-x-1 transition"><ArrowRight></ArrowRight></span>
+              <Link
+                href="/gallery"
+                className={`bg-primary text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full hover:bg-green-700 transition inline-flex items-center gap-3 group w-fit text-sm ${isRTL ? 'flex-row-reverse' : ''}`}
+              >
+                {t('projectsBtn')}
+                <span className={`group-hover:translate-x-1 transition ${isRTL ? 'rotate-180' : ''}`}>
+                  <ArrowRight />
+                </span>
               </Link>
 
               {/* Stats Cards */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-                  <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
-                    <Home className="w-6 h-6 text-white" />
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
+                {[
+                  { icon: Home, value: '65~', label: t('daysDelivery') },
+                  { icon: Calendar, value: '7+', label: t('warranty') },
+                  { icon: Users, value: '180+', label: t('homesBuilt') },
+                ].map((item, index) => (
+                  <div key={index} className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-md transition text-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center mb-3 mx-auto">
+                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    </div>
+                    <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">{item.value}</div>
+                    <div className="text-xs sm:text-sm text-gray-500 leading-tight">{item.label}</div>
                   </div>
-                  <div className="text-4xl font-light text-gray-900 mb-1">65<span className="text-xl font-black text-gray-400">~</span></div>
-                  <div className="text-xs text-gray-500 leading-tight">days for turnkey construction delivery</div>
-                </div>
-
-                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-                  <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
-                    <Calendar className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-4xl font-light text-gray-900 mb-1">7<span className="text-xl font-black text-gray-400">+</span></div>
-                  <div className="text-xs text-gray-500 leading-tight">Years of warranty on the completed home</div>
-                </div>
-
-                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-                  <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-4xl font-light text-gray-900 mb-1">180<span className="text-xl font-black text-gray-400">+</span></div>
-                  <div className="text-xs text-gray-500 leading-tight">homes built since 2023</div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Right Section - Image Container */}
-          <div className="relative min-h-[700px] w-full lg:w-[600px]  lg:-ml-8 ">
+          {/* RIGHT SECTION */}
+          <div className="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[700px] w-full lg:w-[600px] order-2 lg:order-2 mt-6 lg:mt-0">
             {/* Top Buttons */}
-            <div className="absolute top-6 right-13 z-10 flex gap-3">
-              <button className="bg-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2 text-sm font-medium">
-                About Us
-              </button>
-              <button className="bg-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2 text-sm font-medium">
-                <Phone className="w-4 h-4" />
-                +964 (999) 999-9999
-              </button>
+            <div
+              className={`absolute top-4 sm:top-6 flex gap-2 sm:gap-3 z-10 ${isRTL ? 'left-4 sm:left-6 flex-row-reverse' : 'right-4 sm:right-6'}`}
+            >
+              <Link href="/about">
+                <button className="bg-accent px-4 py-2 sm:px-6 sm:py-3 text-primary rounded-full shadow-lg hover:shadow-xl transition text-xs sm:text-sm font-medium">
+                  {t('aboutUs')}
+                </button>
+              </Link>
+              <Link href="tel:+9647700972727">
+                <button className="bg-accent px-4 py-2 sm:px-6 sm:py-3 text-primary rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2 text-xs sm:text-sm font-medium">
+                  <Phone className="w-4 h-4" />
+                  <span className="hidden sm:inline">+964 (770)0972727</span>
+                </button>
+              </Link>
             </div>
 
-            {/* Image that fits the entire container */}
-            <Image
-              src="/image/land.png"
-              alt="Modern prefab home"
-              fill
-              className="object-cover rounded-[40px]"
-              priority
-              sizes="(max-width: 768px) 100vw, 65vw"
-            />
+            {/* Video */}
+                  <video
+        src="/videos/intro1.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/image/portrait.png"
+        className="absolute inset-0 w-full h-full object-cover rounded-[30px] sm:rounded-[40px]"
+      ></video>
+
+
           </div>
         </div>
       </div>

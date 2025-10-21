@@ -1,189 +1,113 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { supabase } from '../lib/supabaseClient';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Link from "next/link";
+import { useTranslation } from 'react-i18next';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useDirection } from './hooks/useDirection'; 
 
-interface House {
-  id: number;
-  name: string;
-  location: string;
-  price: number;
-  image_base64?: string;
-  sqft?: number;
-}
-
-export default function HouseCatalog() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [houses, setHouses] = useState<House[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  // Fetch houses from Supabase
-  useEffect(() => {
-    const fetchHouses = async () => {
-      try {
-        setLoading(true);
-        const { data, error } = await supabase
-          .from('properties')
-          .select('*')
-          .order('created_at', { ascending: false })
-          .limit(8); // Limit to 8 for the slider
-
-        if (error) throw error;
-        setHouses((data as House[]) || []);
-      } catch (err) {
-        console.error('Error fetching houses:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchHouses();
-  }, []);
-
-  // Calculate how many items to show at once based on screen size
-  const itemsPerView = 4;
-  const maxIndex = Math.max(0, houses.length - itemsPerView);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => Math.max(prev - 1, 0));
-  };
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-800 mx-auto mb-4"></div>
-          <p className="text-gray-600 text-lg">Loading catalog...</p>
-        </div>
-      </div>
-    );
-  }
+export default function PropertyCatalog() {
+  const { t, i18n } = useTranslation();
+  const { isRTL, direction } = useDirection();
+  
+  const properties = [
+    { title: "Qaiwan Group", count: "Qaiwan City, Qaiwan Heights", image: "image/qaiwangroup.png" },
+    { title: "Faruq Holdings", count: "Faruq Underpass", image: "image/faruq1.png" },
+    { title: "South Kurdistan Group", count: "Kurdistan Motors", image: "image/skg.png" },
+    { title: "Balla Company", count: "Grand Boulevard, Nergiz Park", image: "image/balla.png" },
+    { title: "Kaso Group", count: "Baghdad Marina", image: "image/kasogroup.png" },
+    { title: "HST Group", count: "3 Projects in Sulaymaniah", image: "image/hsn.png" },
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between items-start mb-12">
-          <div>
-            <h1 className="text-5xl font-bold text-gray-800 mb-2">
-              Catalog of ours
-            </h1>
-            <h1 className="text-5xl font-bold text-gray-800">
-              objects for 2024
-            </h1>
-          </div>
-          <div className="text-right">
-            <p className="text-gray-700 font-medium">Frame technology</p>
-            <p className="text-gray-700 font-medium">of house construction in Kurdistan</p>
-            <p className="text-gray-400 text-sm mt-1">at the peak of popularity</p>
+    <section className="bg-gray-50 py-20 px-6" dir={direction}>
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        {/* LEFT TEXT SECTION */}
+        <div className={`space-y-8 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <h2 className="text-5xl font-extrabold text-gray-900 leading-tight">
+            {t('ourClients.title')} <span className="text-primary">{t('ourClients.highlight')}</span>
+          </h2>
+
+          <p className="text-lg text-gray-600 leading-relaxed max-w-md">
+            {t('ourClients.description')}
+          </p>
+          
+          <Link
+            href="/contact"
+            className={`bg-primary text-white px-8 py-3 sm:px-10 sm:py-4 rounded-full hover:bg-green-700 transition inline-flex items-center gap-3 group w-fit text-md ${isRTL ? 'flex-row-reverse' : ''}`}
+          >
+            {t('projects')}
+            <span className={`group-hover:translate-x-1 transition ${isRTL ? 'rotate-180' : ''}`}>
+              <ArrowRight />
+            </span>
+          </Link>
+
+          <div className={`pt-6 border-t border-gray-200 ${isRTL ? 'text-right' : 'text-left'}`}>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">
+              {t('ourClients.nursery.title')}
+            </h3>
+            <p className="text-sm text-gray-600">
+              {t('ourClients.nursery.description')}
+            </p>
           </div>
         </div>
 
-        {/* Houses Grid */}
-        {houses.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-gray-600 text-xl">No properties available at the moment.</p>
-          </div>
-        ) : (
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div 
-                className="flex gap-6 transition-transform duration-500 ease-out"
-                style={{ 
-                  transform: `translateX(-${currentIndex * (100 / itemsPerView + 1.5)}%)` 
-                }}
-              >
-                {houses.map((house) => (
-                  <div 
-                    key={house.id} 
-                    className="min-w-[calc(25%-18px)] flex-shrink-0"
-                  >
-                    <div className="relative rounded-3xl overflow-hidden shadow-xl group cursor-pointer">
-                      {house.image_base64 ? (
-                        <img 
-                          src={house.image_base64} 
-                          alt={house.name}
-                          className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                      ) : (
-                        <div className="w-full h-96 bg-gray-300 flex items-center justify-center">
-                          <span className="text-gray-500">No Image</span>
-                        </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 className="text-xl font-semibold mb-1">
-                          {house.name}
-                        </h3>
-                        <p className="text-sm text-white/80 mb-2">
-                          {house.location}
-                        </p>
-                        {house.sqft && (
-                          <p className="text-sm text-white/80 mb-1">
-                            {house.sqft}m²
-                          </p>
-                        )}
-                        <p className="text-lg">
-                          Price: ${formatPrice(house.price)}
-                        </p>
-                      </div>
+        {/* RIGHT SLIDER SECTION */}
+        <div className="relative">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={28}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="pb-12"
+            dir={isRTL ? 'rtl' : 'ltr'}
+            key={direction}
+          >
+            {properties.map((property, index) => (
+              <SwiperSlide key={index}>
+                <div className="group relative rounded-2xl bg-white overflow-hidden transition-all duration-300 h-[360px] flex flex-col">
+                  <div className="h-56 w-full overflow-hidden">
+                    <img
+                      src={property.image}
+                      alt={property.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className={`flex-1 p-5 flex flex-col justify-between ${isRTL ? 'text-right' : 'text-left'}`}>
+                    <div>
+                      <h3 className="text-md text-primary">{property.title}</h3>
+                      <p className="text-sm text-gray-600 mt-1">{property.count}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-            {/* Navigation Buttons */}
-            <div className="flex gap-4 mt-8">
-              <Link 
-                href="/projects"
-                className="flex items-center gap-2 px-8 py-4 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                To catalog
-                <ChevronRight className="w-5 h-5" />
-              </Link>
-              
-              <div className="flex gap-3 ml-auto">
-                <button 
-                  onClick={prevSlide}
-                  disabled={currentIndex === 0}
-                  className={`w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
-                    currentIndex === 0 
-                      ? 'opacity-50 cursor-not-allowed' 
-                      : 'hover:bg-gray-100 hover:scale-110'
-                  }`}
-                  aria-label="Previous"
-                >
-                  <ChevronLeft className="w-6 h-6 text-gray-800" />
-                </button>
-                <button 
-                  onClick={nextSlide}
-                  disabled={currentIndex >= maxIndex}
-                  className={`w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
-                    currentIndex >= maxIndex 
-                      ? 'opacity-50 cursor-not-allowed' 
-                      : 'hover:bg-gray-100 hover:scale-110'
-                  }`}
-                  aria-label="Next"
-                >
-                  <ChevronRight className="w-6 h-6 text-gray-800" />
-                </button>
-              </div>
-            </div>
+          {/* Navigation Buttons */}
+          <div className="flex items-center justify-center gap-6 mt-6">
+            <button className={`custom-prev w-11 h-11 flex items-center justify-center rounded-full bg-white border border-gray-300 hover:bg-gray-100 transition ${isRTL ? 'order-2' : 'order-1'}`}>
+              <ChevronLeft className={`w-6 h-6 text-primary transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+            </button>
+
+            <button className={`custom-next w-11 h-11 flex items-center justify-center rounded-full bg-white border border-gray-300 hover:bg-gray-100 transition ${isRTL ? 'order-1' : 'order-2'}`}>
+              <ChevronRight className={`w-6 h-6 text-primary transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+            </button>
           </div>
-        )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
