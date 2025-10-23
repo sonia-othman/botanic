@@ -203,7 +203,7 @@ export default function Footer() {
                 <div className="relative h-48 bg-accent overflow-hidden">
                   {/* Actual Map Image */}
                   <Image 
-                    src="/image/map.png" 
+                    src="/image/map1.png" 
                     alt="Our Location Map" 
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

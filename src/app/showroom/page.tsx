@@ -84,7 +84,7 @@ export default function Showroom() {
           {/* Center Image */}
           <div className="flex justify-center items-center">
             <Image 
-              src="/image/object.png" 
+              src="/image/object1.png" 
               alt="Featured Plant" 
               width={300} 
               height={300} 
