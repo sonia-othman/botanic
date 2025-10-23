@@ -114,8 +114,8 @@ export default function LandingPage() {
               </Link>
 
               {/* Stats Cards */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
-                {[
+<div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6">
+                  {[
                   { icon: Home, value: '190~', label: t('daysDelivery') },
                   { icon: Calendar, value: '13+', label: t('warranty') },
                   { icon: Users, value: '18+', label: t('homesBuilt') },
@@ -161,8 +161,6 @@ export default function LandingPage() {
         poster="/image/portrait.png"
         className="absolute inset-0 w-full h-full object-cover rounded-[30px] sm:rounded-[40px]"
       ></video>
-
-
           </div>
         </div>
       </div>
