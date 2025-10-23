@@ -168,7 +168,7 @@ export default function Showroom() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
     {products.map((product) => (
       <div key={product.id} className="flex flex-col">
-        {/* Product Image with Gray Background - Separate Card */}
+        {/* Product Image */}
         <div className="bg-gray-100 h-70 flex items-center justify-center p-4 rounded-lg mb-4">
           <img 
             src={product.image} 
@@ -200,9 +200,9 @@ export default function Showroom() {
             <div>
               <p className="italic mb-2">natural</p>
               <h2 className="text-4xl font-bold mb-6">Decor Home</h2>
-              <button className="bg-white text-green-600 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition">
-                Shop Now
-              </button>
+              <p className="bg-white text-green-600 px-6 py-2 rounded-md hover:bg-gray-100 transition">
+                Turning Spaces into Green Stories.
+              </p>
             </div>
             <div className="w-50 h-50">
               <img src="/image/pot1.png" alt="Decor Plant" className="w-full h-full object-contain" />
@@ -213,9 +213,9 @@ export default function Showroom() {
             <div>
               <p className="italic text-gray-600 mb-2">Pots</p>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Home Plants</h2>
-              <button className="bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition">
-                Save 38% Off On Sale
-              </button>
+              <p className="bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition">
+                The Art of Living Green.
+              </p>
             </div>
             <div className="w-50 h-50">
               <img src="/image/pot2.png" alt="Home Plant" className="w-full h-full object-contain" />

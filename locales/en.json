@@ -2,15 +2,20 @@
   "home": "Home",
   "pricing": "Showroom",
   "projects": "Contact Us",
-  "headline1": "Dream Home",
-  "headline2": "Made Easy",
-  "subtitle": "Build Your Dream Home with Our Expert Prefab Solutions Fast, Affordable, and Tailored to You!",
-  "projectsBtn": "Gallery",
-  "daysDelivery": "days for turnkey construction delivery",
-  "warranty": "Years of warranty on the completed home",
-  "homesBuilt": "homes built since 2023",
+  "headline1": "Greener Today,",
+  "headline2": "Better Tomorrow.",
+  "subtitle": "Let's Live in a Green Nature!",
+  "projectsBtn": "Landscape",
+  "daysDelivery": "Completed Projects",
+  "warranty": "Years of Experience",
+  "homesBuilt": "Clients",
   "aboutUs": "About Us",
   "we": "What We Do",
+  "construction":"Construction",
+  "ecoFriendly": "Irrigation System",
+  "ecoFriendlyDesc": "Efficient water management solutions for landscape.",
+  "longLifespan":"Water Proofing",
+  "longLifespanDesc":"For rooftops, basements, green areas.",
   "sun": "At Botanic company, our mission is to design and deliver exceptional landscape, green roof, and irrigation system solutions that enhance the beauty and functionality of spaces, exceeding client expectations through quality, innovation, and expertise.",
   "highStrength": "Landscape Service",
   "highStrengthDesc": "Designing and developing outdoor spaces to enhance beauty and functionality.",
@@ -91,8 +96,18 @@
     "teamTitle": "Our Team",
     "ceoRole": "CEO & Founder",
     "accountantRole": "Accountant",
-    "engineerRole": "Agricultural Engineer"
+    "engineerRole": "Agricultural Engineer",
+    "established":"Botanic Company, established in 2022, is a leading provider of innovative landscaping, green roof systems, and irrigation solutions in Iraq.",
+    "passion":"With a passion for transforming",
+    "urban":"urban spaces into sustainable ecosystems, we've rapidly expanded our services across the country, delivering high-quality projects that enhance environmental sustainability and aesthetic appeal.",
+    "expertise":"Our Expertise",
+    "expertiseDesc":"spans design, installation, and maintenance, ensuring seamless execution and long-term success. From Basra to Erbil, and all major cities in between, we've worked with diverse clients, including companies, institutions, and educational organizations.",
+    "commitment":"Our Commitment",
+    "commitmentDesc":"to excellence, professionalism, and environmental stewardship drives us to create thriving green spaces that inspire a healthier, more beautiful Iraq.",
+    "missionstate":"Our Mission",
+    "missionDesc":"To deliver high-quality, eco-conscious solutions that empower businesses and individuals to thrive sustainably. We aim to combine modern technology with nature-inspired innovation."
   },
+
   "gallery": {
     "since2012": "Since 2012",
     "heroTitle": "Our Story & Mission",
@@ -120,7 +135,77 @@
   "showroom": "Showroom",
   "aboutUs": "About Us",
   "contactUs": "Contact Us"
-  }
-
+  },
+  
+  "plants": {
+    "showroom": "OUR SHOWROOM",
+    "types": {
+      "flower": "FLOWER",
+      "greenDecor": "Green Decor",
+      "artificialTree": "Artificial Tree",
+      "potsAndPlanters": "Pots"
+    },
+    "descriptions": {
+      "flower": "Providing of all kinds of flowers.",
+      "greenDecor": "Providing of all kinds of green decors.",
+      "artificialTree": "Providing of all kinds of Artificial Trees.",
+      "potsAndPlanters": "Providing of all kinds of pots and planters."
+    },
+    "seeMore": "Showroom",
+    "previous": "Previous slide",
+    "next": "Next slide"
+  },
+  "testimonials": {
+      "title": "Botanic Activities",
+      "navigation": {
+        "previous": "Previous testimonial",
+        "next": "Next testimonial",
+        "goToSlide": "Go to slide {{number}}"
+      },
+      "slides": [
+        {
+          "quote": "Landscape Design"
+        },
+        {
+          "quote": "Landscape Construction"
+        },
+        {
+          "quote": "Irrigation System Design & Implementation"
+        },
+        {
+          "quote": "Landscape Lighting System"
+        },
+          {
+          "quote": "Construction Pathways"
+        },
+        {
+          "quote": "Providing Of All Kinds Of Trees"
+        },
+        {
+          "quote": "Providing Of All Kinds Of Shrubs And Flowers"
+        },
+        {
+          "quote": "Providing of all kinds of grass"
+        },
+          {
+          "quote": "Providing Of Peatmoss"
+        },
+        {
+          "quote": "Providing And Setting Of Geocell"
+        },
+         {
+          "quote": "Providing Cocopeat"
+        },
+        {
+          "quote": "Providing Geotextile And Plastic Landscape Borders"
+        },
+        {
+          "quote": "All Types Of Stones And Sediments"
+        },
+          {
+          "quote": "Best Type Of Agricultural Soil"
+        }    
+      ]
+    }
 }
     

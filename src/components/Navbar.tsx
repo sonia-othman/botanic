@@ -15,8 +15,10 @@ export default function Navbar() {
     { href: '/', label: t('navbar.home') },
     { href: '/gallery', label: t('navbar.gallery') },
     { href: '/showroom', label: t('navbar.showroom') },
+    { href: '/construction', label: t('construction')},
     { href: '/about', label: t('navbar.aboutUs') },
     { href: '/contact', label: t('navbar.contactUs') },
+    
   ];
 
   const isActive = (path: string) => pathname === path;

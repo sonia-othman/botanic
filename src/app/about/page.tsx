@@ -4,7 +4,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useTranslation } from 'react-i18next';
 import { useDirection } from "@/components/hooks/useDirection";
-
+import { ArrowUpRight, Leaf, HandHeart, Sprout } from 'lucide-react';
+import Link from "next/link";
 export default function AboutPage() {
   const { t } = useTranslation();
   const { direction } = useDirection();
@@ -48,7 +49,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50 px-6 md:px-12">
+      <section className="py-20 bg-white px-6 md:px-12">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           {/* Mission */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -72,6 +73,89 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="h-full bg-accent">
+      {/* Hero Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="flex justify-between items-start mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary flex-1">
+              {t('gallery.heroTitle')}
+            </h1>
+           
+          </div>
+          <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+            {t('about.established')}
+          </p>
+        </div>
+
+        {/* Masonry Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
+          {/* Large Card - Farmer Portrait */}
+          <div className="md:row-span-2 lg:row-span-2">
+            <div className="relative h-full min-h-[500px] md:min-h-[700px] rounded-3xl overflow-hidden group">
+              <img
+                src="image/ab2.jpg"
+                alt="Farmer in field"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900/95 via-green-900/50 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                  {t('about.passion')}
+                </h2>
+                <p className="text-green-100 mb-6 text-base sm:text-lg">
+                {t('about.urban')}
+                </p>
+                
+              </div>
+            </div>
+          </div>
+
+          {/* Natural Farming Card */}
+          <div className="bg-gradient-to-br from-green-50 to-white rounded-3xl p-6 sm:p-8 flex flex-col items-center justify-center text-center">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center mb-6">
+              <Leaf className="w-8 h-8 sm:w-10 sm:h-10 text-green-600" />
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t('about.expertise')}</h3>
+            <p className="text-gray-600 text-sm sm:text-base">
+              {t('about.expertiseDesc')}
+            </p>
+          </div>
+
+          {/* Watering Plants Image */}
+          <div className="md:row-span-2 lg:row-span-1 rounded-3xl overflow-hidden ">
+            <img
+              src="image/greenroof.jpg"
+              alt="Watering plants"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* Farmer Working Image */}
+          <div className="lg:row-span-1 rounded-3xl overflow-hidden min-h-[300px]">
+            <img
+              src="image/layout6.jpg"
+              alt="Farmer working in field"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* Quality Products Card */}
+          <div className="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-6 sm:p-8  flex flex-col items-center justify-center text-center lg:col-start-3">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center mb-6 ">
+              <HandHeart className="w-8 h-8 sm:w-10 sm:h-10 text-green-600" />
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t('about.commitment')}</h3>
+            <p className="text-gray-600 mb-6 text-sm sm:text-base">
+              {t('about.commitmentDesc')}
+            </p>
+            <Link href="/contact" className="bg-green-800 hover:bg-green-600 text-white px-8 py-3 rounded-4xl font-semibold">
+              {t('gallery.contactButton')}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
       {/* Core Values */}
       <section className="py-20 bg-white px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
@@ -106,6 +190,74 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+       <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="mb-12 flex flex-col items-center text-center">          
+          <div className="flex items-center gap-4 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              {t('about.missionstate')}
+            </h1>
+            <Sprout className="w-12 h-12 text-green-600 flex-shrink-0" strokeWidth={1.5} />
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <p className="text-gray-600 leading-relaxed">
+              {t('about.missionDesc')}
+            </p>
+            
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mb-12 rounded-3xl overflow-hidden shadow-xl">
+          <img 
+            src="image/garden1.jpg" 
+            alt="Person watering plants in a sustainable garden"
+            className="w-full h-[400px] md:h-[500px] object-cover"
+          />
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Stat 1 */}
+          <div className="bg-accent rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-5xl font-bold text-gray-700 mb-3">10</h3>
+            <p className="text-gray-700 font-semibold mb-3">Suppliers</p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
+            </p>
+          </div>
+
+          {/* Stat 2 - Highlighted */}
+          <div className="bg-emerald-800 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-5xl font-bold text-white mb-3">190+</h3>
+            <p className="text-white font-semibold mb-3">Completed Projects</p>
+            <p className="text-white/90 text-sm leading-relaxed">
+              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
+            </p>
+          </div>
+
+          {/* Stat 3 */}
+          <div className="bg-accent rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-5xl font-bold text-gray-700 mb-3">15+</h3>
+            <p className="text-gray-700 font-semibold mb-3">Total Clients</p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
+            </p>
+          </div>
+
+          {/* Stat 4 */}
+          <div className="bg-emerald-800 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-5xl font-bold text-white mb-3">12</h3>
+            <p className="text-white font-semibold mb-3">Employees</p>
+            <p className="text-white/90 text-sm leading-relaxed">
+              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* Team Section */}
       <section className="py-20 bg-gray-50 px-6 md:px-12">

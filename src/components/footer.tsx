@@ -65,7 +65,7 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-green-900 text-white overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image 
           src="/image/botonicwhite.png" 

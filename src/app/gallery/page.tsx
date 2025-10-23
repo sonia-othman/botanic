@@ -33,15 +33,20 @@ const GalleryPage = () => {
   ];
 
   const masonryImages = [
-    { src: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&h=800&fit=crop", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
-    { src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=500&fit=crop", title: "Dark Moody Space", subtitle: "Minimalist Design" },
-    { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=700&fit=crop", title: "Contemporary Design", subtitle: "Urban Living" },
-    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=600&fit=crop", title: "Green Living Space", subtitle: "Sustainable Design" },
-    { src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=900&fit=crop", title: "Rooftop Garden", subtitle: "Green Roof Project" },
-    { src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&h=550&fit=crop", title: "Modern Apartment", subtitle: "City Living" },
-    { src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=750&fit=crop", title: "Elegant Interior", subtitle: "Sophisticated Style" },
-    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=650&fit=crop", title: "Cozy Corner", subtitle: "Comfort Design" },
-    { src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=850&fit=crop", title: "Luxury Bedroom", subtitle: "Premium Comfort" }
+    { src: "image/layout1.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
+    { src: "image/layout2.jpg", title: "Dark Moody Space", subtitle: "Minimalist Design" },
+    { src: "image/layout3.jpg", title: "Contemporary Design", subtitle: "Urban Living" },
+    { src: "image/layout4.jpg", title: "Green Living Space", subtitle: "Sustainable Design" },
+    { src: "image/layout5.jpg", title: "Rooftop Garden", subtitle: "Green Roof Project" },
+    { src: "image/layout6.jpg", title: "Modern Apartment", subtitle: "City Living" },
+    { src: "image/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
+    { src: "image/garden.jpg", title: "Cozy Corner", subtitle: "Comfort Design" },
+    { src: "image/landingpage.jpg", title: "Luxury Bedroom", subtitle: "Premium Comfort" },
+    { src: "image/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
+    { src: "image/layout5.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
+
+
+    
   ];
 
   const nextSlide = () => {
@@ -279,11 +284,11 @@ const GalleryPage = () => {
           {/* Blur Background */}
           <div className="absolute inset-0 bg-white/10 backdrop-blur-lg"></div>
           
-          {/* Image Container - This won't close when clicked */}
+          {/* Image Container*/}
           <div 
             ref={modalRef}
             className="relative max-w-4xl max-h-[85vh] mx-4 z-50 cursor-auto"
-            onClick={(e) => e.stopPropagation()} // Prevent click from bubbling to parent
+            onClick={(e) => e.stopPropagation()} 
           >
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden relative">
               <img
@@ -293,8 +298,8 @@ const GalleryPage = () => {
               />
               
               {/* Image Info Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">
+              <div className="absolute bottom-0 left-0 right-0 to-transparent p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">
                   {masonryImages[selectedImage].title}
                 </h3>
                 <p className="text-gray-200">

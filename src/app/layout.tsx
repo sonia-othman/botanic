@@ -7,9 +7,14 @@ import Footer from '@/components/footer';
 export const metadata = {
   title: 'Botanic',
   description: 'Botanic Landscape Construction Company',
+  icons: {
+    icon: '/botanic1.ico',
+    
+    shortcut: '/botanic1.ico',
+    apple: '/botanic1.png',
+  },
 };
 
-// Load the font
 const notoKufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
   weight: ['400', '500', '700'],
