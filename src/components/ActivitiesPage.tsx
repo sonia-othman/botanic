@@ -126,7 +126,7 @@ export default function ActivitiesPage() {
               </div>
               
               {/* Quote */}
-              <h2 className="relative text-4xl md:text-2xl font-bold text-gray-700 mb-4">
+              <h2 className="relative text-4xl sm:text-xl md:text-2xl font-bold text-gray-700 mb-4">
                 {t(`testimonials.slides.${currentSlide}.quote`)}
               </h2>
             </div>
