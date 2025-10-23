@@ -29,10 +29,10 @@ export default function Showroom() {
   ];
 
   const features = [
-    { icon: '/image/shipping-icon.png', title: 'Free Shipping', desc: 'Lorem ipsum Dolor' },
-    { icon: '/images/support-icon.png', title: '24/7 Support', desc: 'Lorem ipsum Dolor' },
-    { icon: '/images/saving-icon.png', title: 'Big Saving', desc: 'Lorem ipsum Dolor' },
-    { icon: '/images/payment-icon.png', title: 'Online Payment', desc: 'Lorem ipsum Dolor' }
+    { title: 'Free Shipping', desc: 'Lorem ipsum Dolor' },
+    { title: '24/7 Support', desc: 'Lorem ipsum Dolor' },
+    { title: 'Big Saving', desc: 'Lorem ipsum Dolor' },
+    { title: 'Online Payment', desc: 'Lorem ipsum Dolor' }
   ];
 
   return (
