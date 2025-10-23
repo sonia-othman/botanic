@@ -83,7 +83,7 @@ const PlantsSection = () => {
     }
     autoPlayRef.current = setInterval(() => {
       moveSlider('next');
-    }, 3000); 
+    }, 5000); 
   };
 
   useEffect(() => {
@@ -267,20 +267,6 @@ const PlantsSection = () => {
           ))}
         </div>
 
-      <div className="nextPrevArrows fixed bottom-4 right-4 md:absolute md:top-[90%] md:left-5 z-[100] flex gap-2.5 items-center md:-translate-y-1/2">
-          <button className="w-10 h-10 rounded-full bg-primary/80 backdrop-blur border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-accent hover:text-black flex items-center justify-center" 
-            onClick={() => moveSlider('prev')}
-            aria-label={t('plants.previous')}
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button className="w-10 h-10 rounded-full bg-primary/80 backdrop-blur border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-accent hover:text-black flex items-center justify-center" 
-            onClick={() => moveSlider('next')}
-            aria-label={t('plants.next')}
-          >
-            <ChevronRight size={20} />
-          </button>
-        </div>
       </div>
     </div>
   );

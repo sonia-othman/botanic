@@ -9,9 +9,6 @@ import {
   Mail, 
   Facebook, 
   Instagram, 
-  Twitter, 
-  Youtube,
-  ArrowUp,
   Clock
 } from 'lucide-react';
 
@@ -59,9 +56,6 @@ export default function Footer() {
     mapImageUrl: 'https://maps.app.goo.gl/6MkK63eoR68hyZDf7'
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="relative bg-green-900 text-white overflow-hidden">
@@ -227,17 +221,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-white  text-green-700 p-3 rounded-full shadow-lg transition transform hover:scale-110 z-50"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-6 h-6" />
-      </button>
-
-  
     </footer>
   );
 }
