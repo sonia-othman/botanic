@@ -145,7 +145,7 @@ export default function LandingPage() {
               </Link>
                 <button className="bg-accent px-4 py-2 sm:px-6 sm:py-3 text-primary rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2 text-xs sm:text-sm font-medium">
                   <Phone className="w-4 h-4" />
-                  <span className=" sm:inline">+964 (770)0972727</span>
+                  <span dir="ltr" className="sm:inline">0770 097 2727</span>
                 </button>
             </div>
 
