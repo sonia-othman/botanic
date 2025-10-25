@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Construction, LandPlot, Droplet, ArrowRight, Image} from 'lucide-react';
+import { Construction, LandPlot, Droplet, ArrowRight, Image, Flower2 , Droplets, Sprout, Leaf  } from 'lucide-react';
 
 export default function Services() {
   const { t, i18n } = useTranslation();
@@ -18,7 +18,7 @@ export default function Services() {
     {
       title: t('maternity'),
       description: t('if'),
-      icon: Image,
+      icon: Leaf,
       bgColor: "bg-green-900",
       textColor: "text-white",
       iconBg: "bg-accent",
@@ -43,9 +43,9 @@ export default function Services() {
       iconColor: "text-gray-900"
     },
     {
-      title: t('cashless'),
-      description: t('cashlesspayment'),
-      icon: Droplet,
+      title: t('irrigation'),
+      description: t('irrigationdesc'),
+      icon: Droplets,
       bgColor: "bg-green-900",
       textColor: "text-white",
       iconBg: "bg-accent",
@@ -53,18 +53,18 @@ export default function Services() {
     },
    
     {
-      title: t('subsidies'),
-      description: t('subsidiesgv'),
-      icon: Construction,
+      title: t('nursery'),
+      description: t('nurserydesc'),
+      icon: Flower2 ,
       bgColor: "bg-accent",
       textColor: "text-green-900",
       iconBg: "bg-green-900",
       iconColor: "text-white"
     },
     {
-      title: t('cashless'),
-      description: t('cashlesspayment'),
-      icon: Droplet,
+      title: t('greenroof'),
+      description: t('greenroofdesc'),
+      icon: Sprout ,
       bgColor: "bg-green-900",
       textColor: "text-white",
       iconBg: "bg-accent",
