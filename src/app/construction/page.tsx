@@ -2,6 +2,8 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
+import { useTranslation } from 'react-i18next';
+import { useDirection } from '@/components/hooks/useDirection';
 
 interface Article {
   id: number;
@@ -11,6 +13,8 @@ interface Article {
 }
 
 export default function ConstructionPage() {
+  const { t, i18n } = useTranslation();
+  const { isRTL, direction } = useDirection();
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = React.useState<number>(0);
   const [allImages, setAllImages] = React.useState<string[]>([]);
@@ -18,62 +22,62 @@ export default function ConstructionPage() {
   const waterproofingArticles: Article[] = [
     {
       id: 1,
-      category: 'WATERPROOFING SOLUTIONS',
-      title: 'Complete Guide To Basement Waterproofing',
+      category: t('constructions.waterproofing.articles.1.category'),
+      title: t('constructions.waterproofing.articles.1.title'),
       image: 'image/14.png',
     },
     {
       id: 2,
-      category: 'WATERPROOFING TECHNIQUES',
-      title: 'Modern Membrane Systems',
+      category: t('constructions.waterproofing.articles.2.category'),
+      title: t('constructions.waterproofing.articles.2.title'),
       image: 'image/activities1.png',
     },
     {
       id: 3,
-      category: 'WATERPROOFING TIPS',
-      title: 'Foundation Sealing Best Practices',
+      category: t('constructions.waterproofing.articles.3.category'),
+      title: t('constructions.waterproofing.articles.3.title'),
       image:'image/activities2.png',
     },
     {
       id: 4,
-      category: 'WATERPROOFING SOLUTIONS',
-      title: 'Roof Waterproofing Methods',
+      category: t('constructions.waterproofing.articles.4.category'),
+      title: t('constructions.waterproofing.articles.4.title'),
       image: 'image/activities10.png',
     },
     {
       id: 5,
-      category: 'EXPERT ADVICE',
-      title: 'protecting your investment from water damage.',
+      category: t('constructions.waterproofing.articles.5.category'),
+      title: t('constructions.waterproofing.articles.5.title'),
       image: 'image/g10.png',
     },
     {
       id: 6,
-      category: 'WATERPROOFING SYSTEMS',
-      title: 'Commercial Building Protection',
+      category: t('constructions.waterproofing.articles.6.category'),
+      title: t('constructions.waterproofing.articles.6.title'),
       image: 'image/bottomimage.jpg',
     },
     {
       id: 7,
-      category: 'WATERPROOFING GUIDE',
-      title: 'Underground Structure Waterproofing',
+      category: t('constructions.waterproofing.articles.7.category'),
+      title: t('constructions.waterproofing.articles.7.title'),
       image: 'image/14.png',
     },
     {
       id: 8,
-      category: 'WATERPROOFING MATERIALS',
-      title: 'Choosing The Right Sealants',
+      category: t('constructions.waterproofing.articles.8.category'),
+      title: t('constructions.waterproofing.articles.8.title'),
       image: 'image/layout5.jpg',
     },
     {
       id: 9,
-      category: 'WATERPROOFING PROJECTS',
-      title: 'Bathroom and Wet Area Solutions',
+      category: t('constructions.waterproofing.articles.9.category'),
+      title: t('constructions.waterproofing.articles.9.title'),
       image:'image/layout6.jpg',
     },
     {
       id: 10,
-      category: 'EXPERT ADVICE',
-      title: 'Proper waterproofing prevents costly repairs.',
+      category: t('constructions.waterproofing.articles.10.category'),
+      title: t('constructions.waterproofing.articles.10.title'),
       image: 'image/layout7.jpg',
     }
   ];
@@ -81,69 +85,65 @@ export default function ConstructionPage() {
   const insulationArticles: Article[] = [
     {
       id: 1,
-      category: 'INSULATION SOLUTIONS',
-      title: 'Complete Guide To Thermal Insulation',
+      category: t('constructions.insulation.articles.1.category'),
+      title: t('constructions.insulation.articles.1.title'),
       image: 'image/explore.jpg',
     },
     {
       id: 2,
-      category: 'INSULATION TYPES',
-      title: 'Modern Insulation Materials',
+      category: t('constructions.insulation.articles.2.category'),
+      title: t('constructions.insulation.articles.2.title'),
       image: 'image/g2.png',
     },
     {
       id: 3,
-      category: 'INSULATION TIPS',
-      title: 'Energy Efficient Building Practices',
+      category: t('constructions.insulation.articles.3.category'),
+      title: t('constructions.insulation.articles.3.title'),
       image: 'image/greenroof.jpg',
     },
     {
       id: 4,
-      category: 'INSULATION METHODS',
-      title: 'Spray Foam Installation Guide',
+      category: t('constructions.insulation.articles.4.category'),
+      title: t('constructions.insulation.articles.4.title'),
       image: 'image/layout1.jpg',
     },
     {
       id: 5,
-      category: 'EXPERT ADVICE',
-      title: 'Proper insulation is key to energy efficiency, reducing costs and creating comfortable living spaces.',
+      category: t('constructions.insulation.articles.5.category'),
+      title: t('constructions.insulation.articles.5.title'),
       image: 'image/layout4.jpg',
-
     },
     {
       id: 6,
-      category: 'INSULATION SYSTEMS',
-      title: 'Commercial Building Insulation',
+      category: t('constructions.insulation.articles.6.category'),
+      title: t('constructions.insulation.articles.6.title'),
       image: 'image/atree.png',
     },
     {
       id: 7,
-      category: 'INSULATION GUIDE',
-      title: 'Attic and Roof Insulation Techniques',
+      category: t('constructions.insulation.articles.7.category'),
+      title: t('constructions.insulation.articles.7.title'),
       image: 'image/g1.png',
     },
     {
       id: 8,
-      category: 'INSULATION MATERIALS',
-      title: 'Choosing Between Fiberglass and Cellulose',
+      category: t('constructions.insulation.articles.8.category'),
+      title: t('constructions.insulation.articles.8.title'),
       image: 'image/card1.jpg',
     },
     {
       id: 9,
-      category: 'INSULATION PROJECTS',
-      title: 'Soundproofing and Acoustic Insulation',
+      category: t('constructions.insulation.articles.9.category'),
+      title: t('constructions.insulation.articles.9.title'),
       image: 'image/activities6.png',
     },
     {
       id: 10,
-      category: 'EXPERT ADVICE',
-      title: 'Quality insulation reduces energy consumption by up to 50%.',
+      category: t('constructions.insulation.articles.10.category'),
+      title: t('constructions.insulation.articles.10.title'),
       image: 'image/activities7.png',
-
     }
   ];
-
-
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
@@ -179,7 +179,7 @@ export default function ConstructionPage() {
   }, [selectedImage, currentIndex, allImages]);
 
   const ArticleGrid = ({ articles }: { articles: Article[] }) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" dir={direction}>
       {articles.map((article) => (
         <div
           key={article.id}
@@ -198,113 +198,96 @@ export default function ConstructionPage() {
             }
           }}
         >
-<div className="relative h-full min-h-[250px] md:min-h-[300px]">
-                {article.image && (
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              )}
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="text-xs tracking-widest mb-3">{article.category}</p>
-                  <h3 className="text-lg md:text-xl font-bold mb-4 leading-tight">
-                  {article.title}
-                </h3>
-              </div>
-            </div>  
+          <div className="relative h-full min-h-[250px] md:min-h-[300px]">
+            {article.image && (
+              <img
+                src={article.image}
+                alt={article.title}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            )}
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <p className="text-xs tracking-widest mb-3">{article.category}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-4 leading-tight">
+                {article.title}
+              </h3>
+            </div>
+          </div>  
         </div>
       ))}
     </div>
   );
 
   return (
-    <div className="container mx-auto bg-gray-50">
-      {/* Header */}
-        <Navbar />
+    <div className="container mx-auto bg-gray-50" dir={direction}>
+      <Navbar />
+      
       {/* Image Preview Modal */}
       {selectedImage && (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md"
-    onClick={() => setSelectedImage(null)}
-  >
-    <div
-      className="relative max-w-7xl max-h-[90vh]"
-      onClick={(e) => e.stopPropagation()}
-    >
-      {/* Image */}
-      <img
-        src={selectedImage}
-        alt="Preview"
-        className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-      />
-
-      {/* Text Overlay*/}
-      <div className="absolute inset-0 flex items-end justify-start p-4 md:p-8 rounded-lg">
-       <div className="text-left text-white max-w-full md:max-w-lg">
-        <p className="text-xs md:text-sm uppercase tracking-widest opacity-90">
-
-            {[
-              ...waterproofingArticles,
-              ...insulationArticles,
-            ].find((a) => a.image === selectedImage)?.category}
-          </p>
-        {/* <h2 className="text-base md:text-xl font-medium mt-2 leading-snug drop-shadow-lg">
-            {
-              [
-                ...waterproofingArticles,
-                ...insulationArticles,
-              ].find((a) => a.image === selectedImage)?.title
-            }
-          </h2> */}
-        </div>
-      </div>
-
-      {/* Close Button */}
-      <button
-        onClick={() => setSelectedImage(null)}
-        className="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 transition-colors"
-      >
-        <X className="w-6 h-6" />
-      </button>
-
-      {/* Previous Button */}
-      {currentIndex > 0 && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handlePrevious();
-          }}
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 md:p-3 transition-colors"        >
-          <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
-                </button>
-              )}
-
-      {/* Next Button */}
-      {currentIndex < allImages.length - 1 && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleNext();
-          }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 transition-colors"
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md"
+          onClick={() => setSelectedImage(null)}
         >
-          <ArrowRight className="w-6 h-6" />
-        </button>
+          <div
+            className="relative max-w-7xl max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImage}
+              alt="Preview"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            />
+
+            <div className="absolute inset-0 flex items-end justify-start p-4 md:p-8 rounded-lg">
+              <div className={`text-${isRTL ? 'right' : 'left'} text-white max-w-full md:max-w-lg`}>
+                <p className="text-xs md:text-sm uppercase tracking-widest opacity-90">
+                  {[...waterproofingArticles, ...insulationArticles].find((a) => a.image === selectedImage)?.category}
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setSelectedImage(null)}
+              className={`absolute top-4 ${isRTL ? 'left-4' : 'right-4'} bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 transition-colors`}
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {currentIndex > 0 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handlePrevious();
+                }}
+                className={`absolute ${isRTL ? 'right-2 md:right-4' : 'left-2 md:left-4'} top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 md:p-3 transition-colors`}
+              >
+                {isRTL ? <ArrowRight className="w-5 h-5 md:w-6 md:h-6" /> : <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />}
+              </button>
+            )}
+
+            {currentIndex < allImages.length - 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleNext();
+                }}
+                className={`absolute ${isRTL ? 'left-4' : 'right-4'} top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 transition-colors`}
+              >
+                {isRTL ? <ArrowLeft className="w-6 h-6" /> : <ArrowRight className="w-6 h-6" />}
+              </button>
+            )}
+          </div>
+        </div>
       )}
-    </div>
-  </div>
-)}
+
       {/* Waterproofing Section */}
       <section className="py-16 px-4 bg-accent">
         <div className="max-w-7xl mx-auto text-center mb-12">
-<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-            Waterproofing
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            {t('constructions.waterproofing.title')}
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Expert waterproofing solutions and techniques to protect your structures from water damage. 
-            Comprehensive guides on materials, methods, and best practices.
+            {t('constructions.waterproofing.description')}
           </p>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -312,16 +295,14 @@ export default function ConstructionPage() {
         </div>
       </section>
 
-
       {/* Insulation Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-12">
-<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-            Insulation System
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            {t('constructions.insulation.title')}
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Professional insulation services and techniques for energy efficiency. 
-            Expert guidance on thermal and acoustic insulation solutions for your projects.
+            {t('constructions.insulation.description')}
           </p>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

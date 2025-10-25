@@ -11,24 +11,28 @@ import {
   Instagram, 
   Clock
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useDirection } from '@/components/hooks/useDirection';
 
 export default function Footer() {
+  const { t } = useTranslation();
+  const { isRTL, direction } = useDirection();
   const currentYear = new Date().getFullYear();
 
   const navigation = {
     main: [
-      { name: 'Home', href: '/' },
-      { name: 'Gallery', href: '/gallery' },
-      { name: 'Showroom', href: '/showroom' },
-      { name: 'About Us', href: '/about' },
-      { name: 'Contact', href: '/contact' },
+      { name: t('footers.navigation.home'), href: '/' },
+      { name: t('footers.navigation.gallery'), href: '/gallery' },
+      { name: t('footers.navigation.showroom'), href: '/showroom' },
+      { name: t('footers.navigation.about'), href: '/about' },
+      { name: t('footers.navigation.contact'), href: '/contact' },
     ],
     services: [
-      { name: 'Landscape Design', href: '#' },
-      { name: 'Green Roof Systems', href: '#' },
-      { name: 'Irrigation Systems', href: '#' },
-      { name: 'Artificial Plants', href: '#' },
-      { name: 'Water Proofing', href: '#' },
+      { name: t('footers.services.landscapeDesign'), href: '#' },
+      { name: t('footers.services.greenRoof'), href: '#' },
+      { name: t('footers.services.irrigation'), href: '#' },
+      { name: t('footers.services.artificialPlants'), href: '#' },
+      { name: t('footers.services.waterproofing'), href: '#' },
     ]
   };
 
@@ -50,14 +54,14 @@ export default function Footer() {
   const contactInfo = {
     phone: '+964 (770) 097 2727',
     email: 'botanic.landscape@gmail.com',
-    address: 'Sulaimaniyah, Malik Mahmood',
+    address: t('footers.contact.address'),
     mapUrl: 'https://maps.app.goo.gl/6MkK63eoR68hyZDf7',
-    workingHours: 'Sat - Thu: 10:00 AM - 11:00 PM',
+    workingHours: t('footers.contact.workingHours'),
     mapImageUrl: 'https://maps.app.goo.gl/6MkK63eoR68hyZDf7'
   };
 
   return (
-    <footer className="relative bg-green-900 text-white overflow-hidden">
+    <footer className="relative bg-green-900 text-white overflow-hidden" dir={direction}>
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -75,7 +79,7 @@ export default function Footer() {
           
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-4 sm:mb-6">
+            <Link href="/" className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-2 mb-4 sm:mb-6`}>
               <Image 
                 src="/image/botonicwhite.png" 
                 alt="Botanic Company" 
@@ -85,12 +89,11 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
-              Transforming spaces with innovative landscaping solutions since 2012. 
-              Your trusted partner for green environments in Iraq.
+              {t('footers.company.description')}
             </p>
             
             {/* Social Media */}
-            <div className="flex space-x-4 sm:space-x-4 mb-4 sm:mb-6">
+            <div className={`flex ${isRTL ? 'space-x-reverse' : ''} space-x-4 sm:space-x-4 mb-4 sm:mb-6`}>
               {socialLinks.map((item) => (
                 <a
                   key={item.name}
@@ -106,10 +109,9 @@ export default function Footer() {
             </div>
 
             {/* Working Hours */}
-            <div className="flex items-start space-x-3 text-gray-300">
-              <Clock className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
+            <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3 text-gray-300`}>
               <div>
-                <p className="text-sm sm:text-sm font-medium">Working Hours</p>
+                <p className="text-sm sm:text-sm font-medium">{t('footers.contact.workingHoursLabel')}</p>
                 <p className="text-xs sm:text-sm">{contactInfo.workingHours}</p>
               </div>
             </div>
@@ -117,7 +119,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">Quick Links</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">
+              {t('footers.quickLinks')}
+            </h3>
             <ul className="space-y-2 sm:space-y-3">
               {navigation.main.map((item) => (
                 <li key={item.name}>
@@ -125,7 +129,7 @@ export default function Footer() {
                     href={item.href}
                     className="text-gray-300 hover:text-white transition flex items-center group text-sm sm:text-base"
                   >
-                    <span className="w-1 h-1 bg-accent rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>
+                    <span className={`w-1 h-1 bg-accent rounded-full ${isRTL ? 'ml-3' : 'mr-3'} opacity-0 group-hover:opacity-100 transition`}></span>
                     {item.name}
                   </Link>
                 </li>
@@ -135,14 +139,16 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">Our Services</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">
+              {t('footers.ourServices')}
+            </h3>
             <ul className="space-y-2 sm:space-y-3">
               {navigation.services.map((item) => (
                 <li key={item.name}>
                   <p
                     className="text-gray-300 hover:text-white transition flex items-center group text-sm sm:text-base cursor-pointer"
                   >
-                    <span className="w-1 h-1 bg-accent rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>
+                    <span className={`w-1 h-1 bg-accent rounded-full ${isRTL ? 'ml-3' : 'mr-3'} opacity-0 group-hover:opacity-100 transition`}></span>
                     {item.name}
                   </p>
                 </li>
@@ -152,11 +158,13 @@ export default function Footer() {
 
           {/* Contact & Map */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">Get In Touch</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">
+              {t('footers.getInTouch')}
+            </h3>
             
             {/* Contact Info */}
             <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-              <div className="flex items-start space-x-3">
+              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
                 <Phone className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <a 
                   href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
@@ -166,7 +174,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-start space-x-3">
+              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
                 <Mail className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <a 
                   href={`mailto:${contactInfo.email}`}
@@ -176,7 +184,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-start space-x-3">
+              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
                 <MapPin className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <span className="text-gray-300 text-sm sm:text-base">
                   {contactInfo.address}
@@ -209,7 +217,7 @@ export default function Footer() {
                 <div className="px-3 sm:px-4 py-2 sm:py-3 bg-white flex items-center justify-between">
                   <span className="text-gray-900 text-xs sm:text-sm flex items-center gap-2">
                     <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-gray-700" />
-                    View on Google Maps
+                    {t('footers.contact.viewMap')}
                   </span>
                 </div>
               </a>

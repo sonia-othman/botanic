@@ -206,6 +206,130 @@
           "quote": "Best Type Of Agricultural Soil"
         }    
       ]
+    },
+    
+  "constructions": {
+    "waterproofing": {
+      "title": "Waterproofing",
+      "description": "Expert waterproofing solutions and techniques to protect your structures from water damage. Comprehensive guides on materials, methods, and best practices.",
+      "articles": {
+        "1": {
+          "category": "WATERPROOFING SOLUTIONS",
+          "title": "Complete Guide To Basement Waterproofing"
+        },
+        "2": {
+          "category": "WATERPROOFING TECHNIQUES",
+          "title": "Modern Membrane Systems"
+        },
+        "3": {
+          "category": "WATERPROOFING TIPS",
+          "title": "Foundation Sealing Best Practices"
+        },
+        "4": {
+          "category": "WATERPROOFING SOLUTIONS",
+          "title": "Roof Waterproofing Methods"
+        },
+        "5": {
+          "category": "EXPERT ADVICE",
+          "title": "Protecting your investment from water damage."
+        },
+        "6": {
+          "category": "WATERPROOFING SYSTEMS",
+          "title": "Commercial Building Protection"
+        },
+        "7": {
+          "category": "WATERPROOFING GUIDE",
+          "title": "Underground Structure Waterproofing"
+        },
+        "8": {
+          "category": "WATERPROOFING MATERIALS",
+          "title": "Choosing The Right Sealants"
+        },
+        "9": {
+          "category": "WATERPROOFING PROJECTS",
+          "title": "Bathroom and Wet Area Solutions"
+        },
+        "10": {
+          "category": "EXPERT ADVICE",
+          "title": "Proper waterproofing prevents costly repairs."
+        }
+      }
+    },
+    "insulation": {
+      "title": "Insulation System",
+      "description": "Professional insulation services and techniques for energy efficiency. Expert guidance on thermal and acoustic insulation solutions for your projects.",
+      "articles": {
+        "1": {
+          "category": "INSULATION SOLUTIONS",
+          "title": "Complete Guide To Thermal Insulation"
+        },
+        "2": {
+          "category": "INSULATION TYPES",
+          "title": "Modern Insulation Materials"
+        },
+        "3": {
+          "category": "INSULATION TIPS",
+          "title": "Energy Efficient Building Practices"
+        },
+        "4": {
+          "category": "INSULATION METHODS",
+          "title": "Spray Foam Installation Guide"
+        },
+        "5": {
+          "category": "EXPERT ADVICE",
+          "title": "Proper insulation is key to energy efficiency, reducing costs and creating comfortable living spaces."
+        },
+        "6": {
+          "category": "INSULATION SYSTEMS",
+          "title": "Commercial Building Insulation"
+        },
+        "7": {
+          "category": "INSULATION GUIDE",
+          "title": "Attic and Roof Insulation Techniques"
+        },
+        "8": {
+          "category": "INSULATION MATERIALS",
+          "title": "Choosing Between Fiberglass and Cellulose"
+        },
+        "9": {
+          "category": "INSULATION PROJECTS",
+          "title": "Soundproofing and Acoustic Insulation"
+        },
+        "10": {
+          "category": "EXPERT ADVICE",
+          "title": "Quality insulation reduces energy consumption by up to 50%."
+        }
+      }
     }
+  },
+   "footers": {
+    "navigation": {
+      "home": "Home",
+      "gallery": "Gallery",
+      "showroom": "Showroom",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "services": {
+      "landscapeDesign": "Landscape Design",
+      "greenRoof": "Green Roof Systems",
+      "irrigation": "Irrigation Systems",
+      "artificialPlants": "Artificial Plants",
+      "waterproofing": "Water Proofing"
+    },
+    "company": {
+      "description": "Transforming spaces with innovative landscaping solutions since 2012. Your trusted partner for green environments in Iraq."
+    },
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "getInTouch": "Get In Touch",
+    "contact": {
+      "workingHoursLabel": "Working Hours",
+      "workingHours": "Sat - Thu: 10:00 AM - 11:00 PM",
+      "address": "Sulaimaniyah, Malik Mahmood",
+      "viewMap": "View on Google Maps"
+    }
+  }
+
 }
     
