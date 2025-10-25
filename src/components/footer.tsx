@@ -52,7 +52,7 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    phone: '+964 (770) 097 2727',
+    phone: '0770 097 2727',
     email: 'botanic.landscape@gmail.com',
     address: t('footers.contact.address'),
     mapUrl: 'https://maps.app.goo.gl/6MkK63eoR68hyZDf7',
@@ -167,6 +167,7 @@ export default function Footer() {
               <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
                 <Phone className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <a 
+                dir="ltr"
                   href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
                   className="text-gray-300 hover:text-white transition text-sm sm:text-base"
                 >
