@@ -198,8 +198,8 @@ export default function ConstructionPage() {
             }
           }}
         >
-            <div className="relative h-full min-h-[300px]">
-              {article.image && (
+<div className="relative h-full min-h-[250px] md:min-h-[300px]">
+                {article.image && (
                 <img
                   src={article.image}
                   alt={article.title}
@@ -209,7 +209,7 @@ export default function ConstructionPage() {
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <p className="text-xs tracking-widest mb-3">{article.category}</p>
-                <h3 className="text-xl md:text-xl font-bold mb-4 leading-tight">
+                  <h3 className="text-lg md:text-xl font-bold mb-4 leading-tight">
                   {article.title}
                 </h3>
               </div>
@@ -241,22 +241,23 @@ export default function ConstructionPage() {
       />
 
       {/* Text Overlay*/}
-      <div className="absolute inset-0 flex items-end justify-start p-8 rounded-lg">
-        <div className="text-left text-white max-w-lg">
-          <p className="text-sm uppercase tracking-widest opacity-90">
+      <div className="absolute inset-0 flex items-end justify-start p-4 md:p-8 rounded-lg">
+       <div className="text-left text-white max-w-full md:max-w-lg">
+        <p className="text-xs md:text-sm uppercase tracking-widest opacity-90">
+
             {[
               ...waterproofingArticles,
               ...insulationArticles,
             ].find((a) => a.image === selectedImage)?.category}
           </p>
-          <h2 className="text-xl font-medium mt-2 leading-snug drop-shadow-lg">
+        {/* <h2 className="text-base md:text-xl font-medium mt-2 leading-snug drop-shadow-lg">
             {
               [
                 ...waterproofingArticles,
                 ...insulationArticles,
               ].find((a) => a.image === selectedImage)?.title
             }
-          </h2>
+          </h2> */}
         </div>
       </div>
 
@@ -275,11 +276,10 @@ export default function ConstructionPage() {
             e.stopPropagation();
             handlePrevious();
           }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 transition-colors"
-        >
-          <ArrowLeft className="w-6 h-6" />
-        </button>
-      )}
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 md:p-3 transition-colors"        >
+          <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
+                </button>
+              )}
 
       {/* Next Button */}
       {currentIndex < allImages.length - 1 && (
@@ -299,7 +299,7 @@ export default function ConstructionPage() {
       {/* Waterproofing Section */}
       <section className="py-16 px-4 bg-accent">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
             Waterproofing
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -316,7 +316,7 @@ export default function ConstructionPage() {
       {/* Insulation Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
             Insulation System
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">

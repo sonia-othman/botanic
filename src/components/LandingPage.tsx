@@ -114,7 +114,7 @@ export default function LandingPage() {
               </Link>
 
               {/* Stats Cards */}
-<div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6">
                   {[
                   { icon: Home, value: '190~', label: t('daysDelivery') },
                   { icon: Calendar, value: '13+', label: t('warranty') },
@@ -143,24 +143,22 @@ export default function LandingPage() {
                   {t('aboutUs')}
                 </button>
               </Link>
-              <Link href="tel:+9647700972727">
                 <button className="bg-accent px-4 py-2 sm:px-6 sm:py-3 text-primary rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2 text-xs sm:text-sm font-medium">
                   <Phone className="w-4 h-4" />
-                  <span className="hidden sm:inline">+964 (770)0972727</span>
+                  <span className=" sm:inline">+964 (770)0972727</span>
                 </button>
-              </Link>
             </div>
 
             {/* Video */}
-                  <video
-        src="/videos/intro1.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/image/portrait.png"
-        className="absolute inset-0 w-full h-full object-cover rounded-[30px] sm:rounded-[40px]"
-      ></video>
+            <video
+          src="/videos/intro1.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/image/portrait.png"
+          className="absolute inset-0 w-full h-full object-cover rounded-[30px] sm:rounded-[40px]"
+        ></video>
           </div>
         </div>
       </div>
