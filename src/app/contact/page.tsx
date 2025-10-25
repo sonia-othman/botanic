@@ -97,7 +97,7 @@ const ContactPage = () => {
               <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Phone className="text-white" size={30} />
               </div>
-              <h3 className="font-medium text-slate-700 mb-2">(+964)770 097 2727</h3>
+              <h3 className="font-medium text-slate-700 mb-2">0770 036 6363 | 0773 097 2727</h3>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">

@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { Noto_Kufi_Arabic } from 'next/font/google';
 import I18nProvider from '../components/I18nProvider';
 import Footer from '@/components/footer';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
   title: 'Botanic',
   description: 'Botanic Landscape Construction Company',
@@ -27,6 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <I18nProvider>{children}</I18nProvider>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
