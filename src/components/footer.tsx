@@ -210,7 +210,6 @@ export default function Footer() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
-                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-green-400/0 group-hover:bg-green-400/20 transition-colors duration-300"></div>
                 </div>
                 
