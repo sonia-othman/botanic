@@ -15,7 +15,7 @@ export default function AboutPage() {
       <Navbar />
       <section
         className="relative h-[60vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/image/about.jpg')" }}
+        style={{ backgroundImage: "url('https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/about.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <h1 className="relative text-5xl font-bold text-white z-10">
@@ -39,7 +39,7 @@ export default function AboutPage() {
           </div>
           <div className="relative w-full h-[350px] rounded-2xl overflow-hidden">
             <Image
-              src="/image/aboutstory1.jpg"
+              src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/aboutstory1.jpg"
               alt="Our Story"
               fill
               className="object-cover"
@@ -94,7 +94,7 @@ export default function AboutPage() {
           <div className="md:row-span-2 lg:row-span-2">
             <div className="relative h-full min-h-[500px] md:min-h-[700px] rounded-3xl overflow-hidden group">
               <img
-                src="image/ab2.jpg"
+                src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/ab2.jpg"
                 alt="Farmer in field"
                 className="w-full h-full object-cover"
               />
@@ -125,7 +125,7 @@ export default function AboutPage() {
           {/* Watering Plants Image */}
           <div className="md:row-span-2 lg:row-span-1 rounded-3xl overflow-hidden ">
             <img
-              src="image/greenroof.jpg"
+              src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities12.png"
               alt="Watering plants"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -134,7 +134,7 @@ export default function AboutPage() {
           {/* Farmer Working Image */}
           <div className="lg:row-span-1 rounded-3xl overflow-hidden min-h-[300px]">
             <img
-              src="image/layout6.jpg"
+              src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/greenroof.jpg"
               alt="Farmer working in field"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -212,7 +212,7 @@ export default function AboutPage() {
         {/* Hero Image */}
         <div className="mb-12 rounded-3xl overflow-hidden shadow-xl">
           <img 
-            src="image/garden1.jpg" 
+            src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/garden1.jpg" 
             alt="Person watering plants in a sustainable garden"
             className="w-full h-[400px] md:h-[500px] object-cover"
           />
@@ -274,7 +274,7 @@ export default function AboutPage() {
               <div key={i} className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/image/user1.png"
+                    src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/user1.png"
                     alt={member.name}
                     fill
                     className="object-cover"

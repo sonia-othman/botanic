@@ -15,13 +15,13 @@ const GalleryPage = () => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   const portfolioImages = [
-    "/image/slider1.jpg",
-    "/image/slider2.jpg",
-    "/image/slider3.jpg",
-    "/image/slider4.jpg",
-    "/image/slider5.jpg",
-    "/image/slider6.jpg",
-    "/image/slider7.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider1.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider2.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider3.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider4.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider5.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider6.jpg",
+    "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/slider7.jpg",
   ];
 
   const features = [
@@ -33,17 +33,17 @@ const GalleryPage = () => {
   ];
 
   const masonryImages = [
-    { src: "image/layout1.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
-    { src: "image/layout2.jpg", title: "Dark Moody Space", subtitle: "Minimalist Design" },
-    { src: "image/layout3.jpg", title: "Contemporary Design", subtitle: "Urban Living" },
-    { src: "image/layout4.jpg", title: "Green Living Space", subtitle: "Sustainable Design" },
-    { src: "image/layout5.jpg", title: "Rooftop Garden", subtitle: "Green Roof Project" },
-    { src: "image/layout6.jpg", title: "Modern Apartment", subtitle: "City Living" },
-    { src: "image/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
-    { src: "image/garden.jpg", title: "Cozy Corner", subtitle: "Comfort Design" },
-    { src: "image/landingpage.jpg", title: "Luxury Bedroom", subtitle: "Premium Comfort" },
-    { src: "image/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
-    { src: "image/layout5.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout1.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout2.jpg", title: "Dark Moody Space", subtitle: "Minimalist Design" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout3.jpg", title: "Contemporary Design", subtitle: "Urban Living" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout4.jpg", title: "Green Living Space", subtitle: "Sustainable Design" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout5.jpg", title: "Rooftop Garden", subtitle: "Green Roof Project" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout6.jpg", title: "Modern Apartment", subtitle: "City Living" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/garden.jpg", title: "Cozy Corner", subtitle: "Comfort Design" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/landingpage.jpg", title: "Luxury Bedroom", subtitle: "Premium Comfort" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
+    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout5.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
 
 
     
@@ -126,7 +126,7 @@ const GalleryPage = () => {
       {/* Hero Section */}
       <section 
         className="relative h-96 flex items-center justify-center overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: 'url("/image/hero.jpg")' }}
+        style={{ backgroundImage: 'url("https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/hero.jpg")' }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-8">
@@ -250,7 +250,7 @@ const GalleryPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="/image/bottomimage.jpg"
+                src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/bottomimage.jpg"
                 alt="Luxury interior with green sofa"
                 className="w-full h-auto"
               />

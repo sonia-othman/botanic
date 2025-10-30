@@ -68,7 +68,7 @@ const ContactPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-slate-700 text-white" style={{ backgroundImage: "url('/image/greenbg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="bg-slate-700 text-white" style={{ backgroundImage: "url('https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/greenbg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container mx-auto px-4 py-20">
           <div className="items-center">
             <div>

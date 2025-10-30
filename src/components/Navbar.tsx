@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/image/botanic.png"
+              src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/botanic.png"
               alt="Logo"
               width={70}
               height={70}

@@ -65,7 +65,7 @@ export default function Footer() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/image/botonicwhite.png" 
+          src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/botonicwhite.png" 
           alt="Footer Background" 
           fill
           className="object-cover opacity-10"
@@ -81,7 +81,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-2 mb-4 sm:mb-6`}>
               <Image 
-                src="/image/botonicwhite.png" 
+                src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/botonicwhite.png" 
                 alt="Botanic Company" 
                 width={60}
                 height={60}
@@ -204,7 +204,7 @@ export default function Footer() {
                 <div className="relative h-40 sm:h-44 md:h-48 bg-accent overflow-hidden">
                   {/* Actual Map Image */}
                   <Image 
-                    src="/image/naxsha.png" 
+                    src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/naxsha.png" 
                     alt="Our Location Map" 
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

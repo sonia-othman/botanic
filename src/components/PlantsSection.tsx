@@ -16,28 +16,28 @@ const PlantsSection = () => {
   const sliderData = [
     {
       id: 1,
-      image: '/image/landscape4.png',
+      image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/landscape4.png',
       titleKey: 'plants.showroom',
       typeKey: 'plants.types.flower',
       descriptionKey: 'plants.descriptions.flower'
     },
     {
       id: 2,
-      image: '/image/enjana4.png',
+      image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/enjana4.png',
       titleKey: 'plants.showroom',
       typeKey: 'plants.types.greenDecor',
       descriptionKey: 'plants.descriptions.greenDecor'
     },
     {
       id: 3,
-      image: '/image/atree.png',
+      image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/atree.png',
       titleKey: 'plants.showroom',
       typeKey: 'plants.types.artificialTree',
       descriptionKey: 'plants.descriptions.artificialTree'
     },
     {
       id: 4,
-      image: '/image/enjana5.png',
+      image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/enjana5.png',
       titleKey: 'plants.showroom',
       typeKey: 'plants.types.potsAndPlanters',
       descriptionKey: 'plants.descriptions.potsAndPlanters'

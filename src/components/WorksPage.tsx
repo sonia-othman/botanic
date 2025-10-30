@@ -27,7 +27,7 @@ export default function WorksPages() {
             {/* Image Section */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex justify-center">
               <Image
-                src="/image/bottom.png"
+                src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/bottom.png"
                 alt="Sketch"
                 width={600}
                 height={600}
@@ -39,11 +39,11 @@ export default function WorksPages() {
           {/* Right Section (Feature Cards) */}
           <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-6 bg-white">
             {[
-              { title: t('highStrength'), text: t('highStrengthDesc'), image: "/image/card1.jpg" },
-              { title: t('thermalInsulation'), text: t('thermalInsulationDesc'), image: "/image/greenroof.jpg" },
-              { title: t('noShrinkage'), text: t('noShrinkageDesc'), image: "/image/showroom.png" },
-              { title: t('ecoFriendly'), text: t('ecoFriendlyDesc'), image: "/image/card1.jpg" },
-              { title: t('longLifespan'), text: t('longLifespanDesc'), image: "/image/layout6.jpg" }
+              { title: t('highStrength'), text: t('highStrengthDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities2.png" },
+              { title: t('thermalInsulation'), text: t('thermalInsulationDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/greenroof.jpg" },
+              { title: t('noShrinkage'), text: t('noShrinkageDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/showroom.png" },
+              { title: t('ecoFriendly'), text: t('ecoFriendlyDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/card1.jpg" },
+              { title: t('longLifespan'), text: t('longLifespanDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities12.png" }
             ].map((card, i) => (
               <div
                 key={i}

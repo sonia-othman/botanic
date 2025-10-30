@@ -69,16 +69,7 @@ export default function Services() {
       textColor: "text-white",
       iconBg: "bg-accent",
       iconColor: "text-gray-900"
-    },
-    {
-      title: t('subsidies'),
-      description: t('subsidiesgv'),
-      icon: Construction,
-      bgColor: "bg-accent",
-      textColor: "text-green-900",
-      iconBg: "bg-green-900",
-      iconColor: "text-white"
-    },
+    }
     
   ];
 
@@ -102,7 +93,7 @@ export default function Services() {
 
   return (
     <div className="bg-white rounded-4xl py-20">
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-8 ">
         {/* service */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,8 +105,8 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-16">
             {t('offer')}
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
             {paymentMethods.map((method, index) => (
               <motion.div
                 key={index}

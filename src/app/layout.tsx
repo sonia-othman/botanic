@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={notoKufi.className} dir="ltr">
       <body>
         <I18nProvider>{children}</I18nProvider>
+        
         <Footer />
         <SpeedInsights />
       </body>

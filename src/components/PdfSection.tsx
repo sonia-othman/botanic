@@ -5,13 +5,13 @@ import { useTranslation } from 'react-i18next';
 
 export default function PdfSection() {
     const { t, i18n } = useTranslation();
-  const pdfUrl = "/pdf/Botanic-Co-Profile.pdf"; 
+  const pdfUrl = "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/pdf/Botanic-Co-Profile.pdf"; 
 
   return (
     <div
       className=" relative flex items-center justify-center h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url('/image/greenroof.jpg')", 
+        backgroundImage: "url('https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/greenroof.jpg')", 
       }}
     >
       <div className="absolute inset-0 bg-black/40"></div>

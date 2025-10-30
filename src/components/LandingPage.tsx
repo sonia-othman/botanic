@@ -25,7 +25,7 @@ export default function LandingPage() {
             {/* Header */}
             <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
               <Link href="/" className="flex items-center space-x-2">
-                <Image src="/image/botanic.png" alt="Logo" width={80} height={80} priority />
+                <Image src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/botanic.png" alt="Logo" width={80} height={80} priority />
               </Link>
 
               {/* Desktop Nav */}
@@ -151,12 +151,12 @@ export default function LandingPage() {
 
             {/* Video */}
             <video
-          src="/videos/intro1.mp4"
+          src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/video/intro1.mp4"
           autoPlay
           loop
           muted
           playsInline
-          poster="/image/portrait.png"
+          poster="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/portrait.png"
           className="absolute inset-0 w-full h-full object-cover rounded-[30px] sm:rounded-[40px]"
         ></video>
           </div>

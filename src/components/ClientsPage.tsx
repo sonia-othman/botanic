@@ -14,21 +14,21 @@ export default function ClientsPage() {
   const { isRTL, direction } = useDirection();
 
   const properties = [
-    { title: "Qaiwan Group", count: "Qaiwan City, Qaiwan Heights", image: "/image/qaiwangroup.png" },
-    { title: "Faruq Holdings", count: "Faruq Underpass", image: "/image/faruq1.png" },
-    { title: "South Kurdistan Group", count: "Kurdistan Motors", image: "/image/skg.png" },
-    { title: "Balla Company", count: "Grand Boulevard, Nergiz Park", image: "/image/balla.png" },
-    { title: "Kaso Group", count: "Baghdad Marina", image: "/image/kasogroup.png" },
-    { title: "HST Group", count: "3 Projects in Sulaymaniah", image: "/image/hsn.png" },
-    { title: "Rost Valley Group", count: "Peshang Towers", image: "/image/peshang.png" },
-    { title: "Rozhi Nwe Company", count: "Slamani New Terminal", image: "/image/rozhinwe.png" },
-    { title: "Newroz Stadium", count: "Stadium Landscape", image: "/image/newroz.png" },
-    { title: "Kitab University", count: "Kirkuk Campus", image: "/image/kitab.png" },
-    { title: "Slemani Municipality", count: "Slemani Municipality Build", image: "/image/sharawani.png" },
-    { title: "Halabja Group", count: "Halabja City", image: "/image/halaja.png" },
-    { title: "Mass Holding", count: "Mass Holding", image: "/image/mass.jpg" },
-    { title: "Najmadin Group", count: "Najmadin City", image: "/image/najmadin.png" },
-    { title: "Nokan Group", count: "Nokan Group", image: "/image/nokan.png" },
+    { title: "Qaiwan Group", count: "Qaiwan City, Qaiwan Heights", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/qaiwangroup.png" },
+    { title: "Faruq Holdings", count: "Faruq Underpass", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/faruq1.png" },
+    { title: "South Kurdistan Group", count: "Kurdistan Motors", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/skg.png" },
+    { title: "Balla Company", count: "Grand Boulevard, Nergiz Park", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/balla.png" },
+    { title: "Kaso Group", count: "Baghdad Marina", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/kasogroup.png" },
+    { title: "HST Group", count: "3 Projects in Sulaymaniah", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/hsn.png" },
+    { title: "Rost Valley Group", count: "Peshang Towers", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/peshang.png" },
+    { title: "Rozhi Nwe Company", count: "Slamani New Terminal", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/rozhinwe.png" },
+    { title: "Newroz Stadium", count: "Stadium Landscape", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/newroz.png" },
+    { title: "Kitab University", count: "Kirkuk Campus", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/kitab.png" },
+    { title: "Slemani Municipality", count: "Slemani Municipality Build", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/sharawani.png" },
+    { title: "Halabja Group", count: "Halabja City", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/halaja.png" },
+    { title: "Mass Holding", count: "Mass Holding", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/mass.jpg" },
+    { title: "Najmadin Group", count: "Najmadin City", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/najmadin.png" },
+    { title: "Nokan Group", count: "Nokan Group", image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/nokan.png" },
   ];
 
   return (

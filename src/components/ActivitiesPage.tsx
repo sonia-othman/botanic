@@ -12,59 +12,59 @@ export default function ActivitiesPage() {
   const testimonials = [
     {
       id: 1,
-      image: "image/activities1.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities1.png",
     },
     {
       id: 2,
-      image: "image/activities2.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities2.png",
     },
     {
       id: 3,
-      image: "image/activities3.jpg",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities3.jpg",
     },
     {
       id: 4,
-      image: "image/activities4.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities4.png",
     },
     {
       id: 5,
-      image: "image/activities5.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities5.png",
     },
     {
       id: 6,
-      image: "image/activities6.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities6.png",
     },
     {
       id: 7,
-      image: "image/activities7.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities7.png",
     },
     {
       id: 8,
-      image: "image/activities8.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities8.png",
     },
     {
       id: 9,
-      image: "image/activities9.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities9.png",
     },
     {
       id: 10,
-      image: "image/activities10.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities10.png",
     },
     {
       id: 11,
-      image: "image/activities11.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities11.png",
     },
     {
       id: 12,
-      image: "image/activities12.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities12.png",
     },
     {
       id: 13,
-      image: "image/activities13.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities13.png",
     },
     {
       id: 14,
-      image: "image/activities14.png",
+      image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities14.png",
     }
   ];
 
@@ -81,7 +81,7 @@ export default function ActivitiesPage() {
       className="Container bg-accent flex flex-col items-center justify-center p-4 sm:p-6 md:p-10 lg:p-16 xl:p-20 mx-auto" 
       dir={direction} 
       style={{ 
-        backgroundImage: "url('/image/backshow.png')", 
+        backgroundImage: "url('https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/backshow.png')", 
         backgroundSize: "cover", 
         backgroundPosition: "center" 
       }}
