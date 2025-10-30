@@ -9,23 +9,23 @@ export default function Showroom() {
   const [activeTab, setActiveTab] = useState('new');
 
   const categories = [
-    { name: 'Herbs', items: 6, image: '/image/pot1.png' },
-    { name: 'Shrubs', items: 2, image: '/image/halwasraw.png' },
-    { name: 'Plant', items: 9, image: '/image/pot2.png' },
-    { name: 'Planters', items: 7, image: '/image/pot3.png' },
-    { name: 'Bonsai', items: 3, image: '/image/pot4.png' },
-    { name: 'Basil', items: 5, image: '/image/pot5.png' }
+    { name: 'Herbs', items: 6, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot1.png' },
+    { name: 'Shrubs', items: 2, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/halwasraw.png' },
+    { name: 'Plant', items: 9, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot2.png' },
+    { name: 'Planters', items: 7, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot3.png' },
+    { name: 'Bonsai', items: 3, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot4.png' },
+    { name: 'Basil', items: 5, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot5.png' }
   ];
 
   const products = [
     { id: 1, name: 'Drinio Argenlaisle',   rating: 5, views: 381, likes: 93, cart: 40, discount: 10, image: '/image/pot1.png' },
     { id: 2, name: 'Silver Cock Comb', discount: 10, image: '/image/halwasraw.png' },
-    { id: 3, name: 'Purple Coneflower',  rating: 5, views: 240, likes: 93, cart: 40, image: '/image/pot2.png' },
-    { id: 4, name: 'Epipod Variegole Plant', rating: 5, image: '/image/pot3.png' },
-    { id: 5, name: 'Ornamental Sweet Potato',  rating: 4, image: '/image/pot4.png' },
-    { id: 6, name: 'Denne Blozing Star',  rating: 5, views: 846, likes: 93, cart: 40, image: '/image/pot5.png' },
-    { id: 7, name: 'Siebold Viburnum', rating: 4, image: '/image/pot1.png' },
-    { id: 8, name: 'Whalest Tickseec Plant', rating: 5, image: '/image/pot2.png' }
+    { id: 3, name: 'Purple Coneflower',  rating: 5, views: 240, likes: 93, cart: 40, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/halwasraw.png' },
+    { id: 4, name: 'Epipod Variegole Plant', rating: 5, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot3.png' },
+    { id: 5, name: 'Ornamental Sweet Potato',  rating: 4, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot4.png' },
+    { id: 6, name: 'Denne Blozing Star',  rating: 5, views: 846, likes: 93, cart: 40, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot5.png' },
+    { id: 7, name: 'Siebold Viburnum', rating: 4, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot1.png' },
+    { id: 8, name: 'Whalest Tickseec Plant', rating: 5, image: 'https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot2.png' }
   ];
 
   const features = [
@@ -84,10 +84,10 @@ export default function Showroom() {
           {/* Center Image */}
           <div className="flex justify-center items-center">
             <Image 
-              src="/image/enjana10.png" 
+              src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/enjanacenter.png" 
               alt="Featured Plant" 
-              width={300} 
-              height={300} 
+              width={500} 
+              height={500} 
               className="object-contain"
             />
           </div>
@@ -196,7 +196,7 @@ export default function Showroom() {
       {/* Banner Section */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="p-12 text-white flex items-center justify-between"style={{ backgroundImage: "url('/image/greenbg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="p-12 text-white flex items-center justify-between"style={{ backgroundImage: "url('https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/greenbg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
             <div>
               <p className="italic mb-2">natural</p>
               <h2 className="text-4xl font-bold mb-6">Decor Home</h2>
@@ -205,11 +205,11 @@ export default function Showroom() {
               </p>
             </div>
             <div className="w-50 h-50">
-              <img src="/image/pot1.png" alt="Decor Plant" className="w-full h-full object-contain" />
+              <img src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot1.png" alt="Decor Plant" className="w-full h-full object-contain" />
             </div>
           </div>
 
-          <div className="bg-gray-200 p-12 flex items-center justify-between" style={{ backgroundImage: "url('/image/backshow.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="bg-gray-200 p-12 flex items-center justify-between" style={{ backgroundImage: "url('https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/backshow.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
             <div>
               <p className="italic text-gray-600 mb-2">Pots</p>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Home Plants</h2>
@@ -218,7 +218,7 @@ export default function Showroom() {
               </p>
             </div>
             <div className="w-50 h-50">
-              <img src="/image/pot2.png" alt="Home Plant" className="w-full h-full object-contain" />
+              <img src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/pot2.png" alt="Home Plant" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>

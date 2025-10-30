@@ -78,8 +78,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-8">
           
           {/* Company Info */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-2 mb-4 sm:mb-6`}>
+          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+            <Link href="/" className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-2 mb-4 sm:mb-6 justify-center sm:justify-start`}>
               <Image 
                 src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/botonicwhite.png" 
                 alt="Botanic Company" 
@@ -93,7 +93,7 @@ export default function Footer() {
             </p>
             
             {/* Social Media */}
-            <div className={`flex ${isRTL ? 'space-x-reverse' : ''} space-x-4 sm:space-x-4 mb-4 sm:mb-6`}>
+            <div className={`flex ${isRTL ? 'space-x-reverse' : ''} space-x-4 sm:space-x-4 mb-4 sm:mb-6 justify-center sm:justify-start`}>
               {socialLinks.map((item) => (
                 <a
                   key={item.name}
@@ -109,8 +109,8 @@ export default function Footer() {
             </div>
 
             {/* Working Hours */}
-            <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3 text-gray-300`}>
-              <div>
+            <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3 text-gray-300 justify-center sm:justify-start`}>
+              <div className="text-center sm:text-left">
                 <p className="text-sm sm:text-sm font-medium">{t('footers.contact.workingHoursLabel')}</p>
                 <p className="text-xs sm:text-sm">{contactInfo.workingHours}</p>
               </div>
@@ -118,7 +118,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">
               {t('footers.quickLinks')}
             </h3>
@@ -127,7 +127,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition flex items-center group text-sm sm:text-base"
+                    className="text-gray-300 hover:text-white transition inline-flex items-center group text-sm sm:text-base"
                   >
                     <span className={`w-1 h-1 bg-accent rounded-full ${isRTL ? 'ml-3' : 'mr-3'} opacity-0 group-hover:opacity-100 transition`}></span>
                     {item.name}
@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">
               {t('footers.ourServices')}
             </h3>
@@ -146,7 +146,7 @@ export default function Footer() {
               {navigation.services.map((item) => (
                 <li key={item.name}>
                   <p
-                    className="text-gray-300 hover:text-white transition flex items-center group text-sm sm:text-base cursor-pointer"
+                    className="text-gray-300 hover:text-white transition inline-flex items-center group text-sm sm:text-base cursor-pointer"
                   >
                     <span className={`w-1 h-1 bg-accent rounded-full ${isRTL ? 'ml-3' : 'mr-3'} opacity-0 group-hover:opacity-100 transition`}></span>
                     {item.name}
@@ -158,16 +158,16 @@ export default function Footer() {
 
           {/* Contact & Map */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent">
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-accent text-center sm:text-left">
               {t('footers.getInTouch')}
             </h3>
             
             {/* Contact Info */}
             <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
+              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3 justify-center sm:justify-start`}>
                 <Phone className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <a 
-                dir="ltr"
+                  dir="ltr"
                   href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
                   className="text-gray-300 hover:text-white transition text-sm sm:text-base"
                 >
@@ -175,7 +175,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
+              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3 justify-center sm:justify-start`}>
                 <Mail className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <a 
                   href={`mailto:${contactInfo.email}`}
@@ -185,7 +185,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3`}>
+              <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-3 justify-center sm:justify-start`}>
                 <MapPin className="w-5 h-5 sm:w-5 sm:h-5 text-accent mt-0.5 flex-shrink-0" />
                 <span className="text-gray-300 text-sm sm:text-base">
                   {contactInfo.address}
@@ -194,7 +194,7 @@ export default function Footer() {
             </div>
 
             {/* Map Image Box */}
-            <div className="bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 hover:border-white transition group cursor-pointer">
+            <div className="bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 hover:border-white transition group cursor-pointer max-w-sm mx-auto sm:mx-0">
               <a
                 href={contactInfo.mapUrl}
                 target="_blank"
