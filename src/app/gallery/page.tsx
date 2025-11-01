@@ -33,20 +33,61 @@ const GalleryPage = () => {
   ];
 
   const masonryImages = [
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout1.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout2.jpg", title: "Dark Moody Space", subtitle: "Minimalist Design" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout3.jpg", title: "Contemporary Design", subtitle: "Urban Living" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout4.jpg", title: "Green Living Space", subtitle: "Sustainable Design" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout5.jpg", title: "Rooftop Garden", subtitle: "Green Roof Project" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout6.jpg", title: "Modern Apartment", subtitle: "City Living" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/garden.jpg", title: "Cozy Corner", subtitle: "Comfort Design" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/landingpage.jpg", title: "Luxury Bedroom", subtitle: "Premium Comfort" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout7.jpg", title: "Elegant Interior", subtitle: "Sophisticated Style" },
-    { src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout5.jpg", title: "Luxury Living Room", subtitle: "Modern Interior Design" },
-
-
-    
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout1.jpg", 
+      titleKey: "gallery.projects.qaiwan1.title", 
+      subtitleKey: "gallery.projects.qaiwan1.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout2.jpg", 
+      titleKey: "gallery.projects.aburinasan1.title", 
+      subtitleKey: "gallery.projects.aburinasan1.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout3.jpg", 
+      titleKey: "gallery.projects.qaiwan2.title", 
+      subtitleKey: "gallery.projects.qaiwan2.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout4.jpg", 
+      titleKey: "gallery.projects.aburinasan2.title", 
+      subtitleKey: "gallery.projects.aburinasan2.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout5.jpg", 
+      titleKey: "gallery.projects.halabja.title", 
+      subtitleKey: "gallery.projects.halabja.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout6.jpg", 
+      titleKey: "gallery.projects.faruq.title", 
+      subtitleKey: "gallery.projects.faruq.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout7.jpg", 
+      titleKey: "gallery.projects.mass.title", 
+      subtitleKey: "gallery.projects.mass.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/garden.jpg", 
+      titleKey: "gallery.projects.qaiwan3.title", 
+      subtitleKey: "gallery.projects.qaiwan3.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/landingpage.jpg", 
+      titleKey: "gallery.projects.aburinasan3.title", 
+      subtitleKey: "gallery.projects.aburinasan3.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout7.jpg", 
+      titleKey: "gallery.projects.rozhi.title", 
+      subtitleKey: "gallery.projects.rozhi.subtitle" 
+    },
+    { 
+      src: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/layout5.jpg", 
+      titleKey: "gallery.projects.villa.title", 
+      subtitleKey: "gallery.projects.villa.subtitle" 
+    },
   ];
 
   const nextSlide = () => {
@@ -104,7 +145,6 @@ const GalleryPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Close modal on Escape key press and arrow navigation
   React.useEffect(() => {
     if (selectedImage !== null) {
       document.addEventListener('keydown', handleKeyDown);
@@ -227,13 +267,13 @@ const GalleryPage = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group border border-gray-100">
                     <img 
                       src={image.src}
-                      alt={image.title}
+                      alt={t(image.titleKey)}
                       className="w-full h-auto group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-300 flex items-end p-6">
                       <div className="text-white">
-                        <h4 className="font-bold text-lg mb-1">{image.title}</h4>
-                        <p className="text-sm text-gray-200">{image.subtitle}</p>
+                        <h4 className="font-bold text-lg mb-1">{t(image.titleKey)}</h4>
+                        <p className="text-sm text-gray-200">{t(image.subtitleKey)}</p>
                       </div>
                     </div>
                   </div>
@@ -293,17 +333,17 @@ const GalleryPage = () => {
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden relative">
               <img
                 src={masonryImages[selectedImage].src}
-                alt={masonryImages[selectedImage].title}
+                alt={t(masonryImages[selectedImage].titleKey)}
                 className="w-full h-auto max-h-[70vh] object-contain"
               />
               
               {/* Image Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 to-transparent p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">
-                  {masonryImages[selectedImage].title}
+                  {t(masonryImages[selectedImage].titleKey)}
                 </h3>
                 <p className="text-gray-200">
-                  {masonryImages[selectedImage].subtitle}
+                  {t(masonryImages[selectedImage].subtitleKey)}
                 </p>
               </div>
             </div>

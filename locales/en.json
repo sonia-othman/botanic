@@ -111,7 +111,29 @@
     "commitment":"Our Commitment",
     "commitmentDesc":"to excellence, professionalism, and environmental stewardship drives us to create thriving green spaces that inspire a healthier, more beautiful Iraq.",
     "missionstate":"Our Mission",
-    "missionDesc":"To deliver high-quality, eco-conscious solutions that empower businesses and individuals to thrive sustainably. We aim to combine modern technology with nature-inspired innovation."
+    "missionDesc":"To deliver high-quality, eco-conscious solutions that empower businesses and individuals to thrive sustainably. We aim to combine modern technology with nature-inspired innovation.",
+    "stats": {
+    "suppliers": {
+      "number": "10",
+      "title": "Suppliers",
+      "description": "Trusted partners providing quality materials and solutions for all our projects"
+    },
+    "projects": {
+      "number": "190+",
+      "title": "Completed Projects",
+      "description": "Successfully delivered landscape, green roof, and waterproofing projects across the region"
+    },
+    "clients": {
+      "number": "15+",
+      "title": "Total Clients",
+      "description": "Satisfied clients who trust us with their landscape and construction needs"
+    },
+    "employees": {
+      "number": "12",
+      "title": "Employees",
+      "description": "Dedicated team of professionals committed to excellence in every project"
+    }
+  }
   },
 
   "gallery": {
@@ -133,7 +155,55 @@
     "portfolioTitle": "Complete Portfolio",
     "transformTitle": "Transform Your Space With Nature",
     "transformDescription": "Let us help you create beautiful, sustainable spaces that blend nature with modern design. Our expert team is ready to bring your vision to life.",
-    "contactButton": "Contact Us"
+    "contactButton": "Contact Us",
+    "projects": {
+      "qaiwan1": {
+        "title": "Qaiwan Group",
+        "subtitle": "Landscape Design"
+      },
+      "aburinasan1": {
+        "title": "Aburinasan",
+        "subtitle": "House Garden"
+      },
+      "qaiwan2": {
+        "title": "Qaiwan Group",
+        "subtitle": "Insulation"
+      },
+      "aburinasan2": {
+        "title": "Aburinasan",
+        "subtitle": "Sustainable Design"
+      },
+      "halabja": {
+        "title": "Halabja Group",
+        "subtitle": "Villa Gardens"
+      },
+      "faruq": {
+        "title": "Faruq Group",
+        "subtitle": "Landscape Design"
+      },
+      "mass": {
+        "title": "Mass Group",
+        "subtitle": "Green Roof Project"
+      },
+      "qaiwan3": {
+        "title": "Qaiwan Group",
+        "subtitle": "Water Proofing"
+      },
+      "aburinasan3": {
+        "title": "Aburinasan",
+        "subtitle": "Landscape Design"
+      },
+      "rozhi": {
+        "title": "Rozhi Nwe",
+        "subtitle": "Gardens"
+      },
+      "villa": {
+        "title": "Private Villa",
+        "subtitle": "Gardens"
+      }
+    }
+  
+   
   },
   "navbar":{
   "home": "Home",

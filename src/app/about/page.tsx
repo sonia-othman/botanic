@@ -219,43 +219,43 @@ export default function AboutPage() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Stat 1 */}
-          <div className="bg-accent rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-5xl font-bold text-gray-700 mb-3">10</h3>
-            <p className="text-gray-700 font-semibold mb-3">Suppliers</p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
-            </p>
-          </div>
-
-          {/* Stat 2 - Highlighted */}
-          <div className="bg-emerald-800 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-5xl font-bold text-white mb-3">190+</h3>
-            <p className="text-white font-semibold mb-3">Completed Projects</p>
-            <p className="text-white/90 text-sm leading-relaxed">
-              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
-            </p>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="bg-accent rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-5xl font-bold text-gray-700 mb-3">15+</h3>
-            <p className="text-gray-700 font-semibold mb-3">Total Clients</p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
-            </p>
-          </div>
-
-          {/* Stat 4 */}
-          <div className="bg-emerald-800 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-5xl font-bold text-white mb-3">12</h3>
-            <p className="text-white font-semibold mb-3">Employees</p>
-            <p className="text-white/90 text-sm leading-relaxed">
-              There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have
-            </p>
-          </div>
+       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Stat 1 */}
+        <div className="bg-accent rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <h3 className="text-3xl font-bold text-gray-700 mb-3">{t('about.stats.suppliers.number')}</h3>
+          <p className="text-gray-700 font-semibold mb-3">{t('about.stats.suppliers.title')}</p>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            {t('about.stats.suppliers.description')}
+          </p>
         </div>
+
+        {/* Stat 2 */}
+        <div className="bg-emerald-800 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <h3 className="text-3xl font-bold text-white mb-3">{t('about.stats.projects.number')}</h3>
+          <p className="text-white font-semibold mb-3">{t('about.stats.projects.title')}</p>
+          <p className="text-white/90 text-sm leading-relaxed">
+            {t('about.stats.projects.description')}
+          </p>
+        </div>
+
+        {/* Stat 3 */}
+        <div className="bg-accent rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <h3 className="text-3xl font-bold text-gray-700 mb-3">{t('about.stats.clients.number')}</h3>
+          <p className="text-gray-700 font-semibold mb-3">{t('about.stats.clients.title')}</p>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            {t('about.stats.clients.description')}
+          </p>
+        </div>
+
+        {/* Stat 4 */}
+        <div className="bg-emerald-800 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <h3 className="text-3xl font-bold text-white mb-3">{t('about.stats.employees.number')}</h3>
+          <p className="text-white font-semibold mb-3">{t('about.stats.employees.title')}</p>
+          <p className="text-white/90 text-sm leading-relaxed">
+            {t('about.stats.employees.description')}
+          </p>
+        </div>
+      </div>
       </div>
     </section>
 
