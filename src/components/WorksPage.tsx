@@ -13,9 +13,9 @@ export default function WorksPages() {
       <div className="container mx-auto bg-white rounded-3xl overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-0">
           {/* Left Section */}
-          <div className={`p-8 sm:p-12 lg:p-16 flex flex-col justify-between min-h-[500px] relative ${isRTL ? 'lg:text-right' : 'lg:text-left'} text-center`}>
+          <div className={`p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative ${isRTL ? 'lg:text-right' : 'lg:text-left'} text-center`}>
             {/* Text Section */}
-            <div className="space-y-8 w-full pb-[250px] lg:pb-[250px]">
+            <div className="space-y-8 w-full pb-48 sm:pb-56 lg:pb-64">
               <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight ${isRTL ? 'text-right' : 'text-left'}`}>
                 {t('we')} <br />
               </h2>
@@ -24,20 +24,21 @@ export default function WorksPages() {
               </p>
             </div>
 
-            {/* Image Section */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex justify-center">
+            {/* Image Section - Responsive positioning */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] lg:w-full max-w-[600px]">
               <Image
                 src="https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/bottom.png"
                 alt="Sketch"
                 width={600}
                 height={600}
-                className="object-contain"
+                className="object-contain w-full h-auto"
+                priority
               />
             </div>
           </div>
 
           {/* Right Section (Feature Cards) */}
-          <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-6 bg-white">
+          <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-4 sm:space-y-6 bg-white">
             {[
               { title: t('highStrength'), text: t('highStrengthDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/activities2.png" },
               { title: t('thermalInsulation'), text: t('thermalInsulationDesc'), image: "https://znlzvtokjovapsijnhwg.supabase.co/storage/v1/object/public/images/images/greenroof.jpg" },
@@ -47,10 +48,10 @@ export default function WorksPages() {
             ].map((card, i) => (
               <div
                 key={i}
-                className={`bg-gradient-to-tl from-secondary to-primary text-white rounded-2xl p-2 flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl ${isRTL ? 'flex-row-reverse' : ''}`}
+                className={`bg-gradient-to-tl from-secondary to-primary text-white rounded-2xl p-2 flex items-center gap-3 sm:gap-4 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl ${isRTL ? 'flex-row-reverse' : ''}`}
               >
                 <div className="flex-shrink-0">
-                  <div className="w-25 h-25 bg-white/10 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/10 rounded-xl flex items-center justify-center overflow-hidden">
                     <img
                       src={card.image}
                       alt={card.title}
@@ -58,9 +59,9 @@ export default function WorksPages() {
                     />
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3">{card.title}</h3>
-                  <p className="text-gray-50 text-sm sm:text-base leading-relaxed">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3">{card.title}</h3>
+                  <p className="text-gray-50 text-xs sm:text-sm lg:text-base leading-relaxed">
                     {card.text}
                   </p>
                 </div>

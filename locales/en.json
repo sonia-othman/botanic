@@ -331,11 +331,61 @@
     "getInTouch": "Get In Touch",
     "contact": {
       "workingHoursLabel": "Working Hours",
-      "workingHours": "Sat - Thu: 10:00 AM - 11:00 PM",
+      "workingHours": "Sat - Thu: 10:00  - 23:00 ",
       "address": "Sulaimaniyah, Malik Mahmood",
       "viewMap": "View on Google Maps"
     }
+  },
+  
+  "showroom": {
+    "hero": {
+      "title": "Botanic Company",
+      "subtitle": "Discover the most incredible plants for your home"
+    },
+    "features": {
+      "freeDelivery": {
+        "title": "Free and Fast Delivery",
+        "description": "Plants delivered fresh to your door free on orders over $50."
+      },
+      "support": {
+        "title": "24/7 Customer Support",
+        "description": "We're here whenever you need us day or night."
+      },
+      "returns": {
+        "title": "Hassle-Free Returns",
+        "description": "Changed your mind? Return it within 30 days, no stress."
+      },
+      "payment": {
+        "title": "Secure Payments",
+        "description": "Pay safely with 100% encrypted checkout."
+      }
+    },
+    "categories": {
+      "herbs": "Herbs",
+      "shrubs": "Shrubs",
+      "plant": "Plant",
+      "planters": "Planters",
+      "bonsai": "Bonsai",
+      "basil": "Basil",
+      "items": "items"
+    },
+    "products": {
+      "title": "Our Products"
+    },
+    "banner": {
+      "decor": {
+        "subtitle": "natural",
+        "title": "Decor Home",
+        "cta": "Turning Spaces into Green Stories."
+      },
+      "pots": {
+        "subtitle": "Pots",
+        "title": "Home Plants",
+        "cta": "The Art of Living Green."
+      }
+    }
   }
+
 
 }
     

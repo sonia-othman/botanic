@@ -12,8 +12,7 @@ export default function Services() {
       icon: LandPlot,
       bgColor: "bg-accent",
       textColor: "text-green-900",
-      iconBg: "bg-green-900",
-      iconColor: "text-white"
+      iconColor: "text-primary"
     },
     {
       title: t('maternity'),
@@ -21,8 +20,7 @@ export default function Services() {
       icon: Leaf,
       bgColor: "bg-green-900",
       textColor: "text-white",
-      iconBg: "bg-accent",
-      iconColor: "text-gray-900"
+      iconColor: "text-accent"
     },
     {
       title: t('subsidies'),
@@ -30,8 +28,7 @@ export default function Services() {
       icon: Construction,
       bgColor: "bg-accent",
       textColor: "text-green-900",
-      iconBg: "bg-green-900",
-      iconColor: "text-white"
+      iconColor: "text-primary"
     },
     {
       title: t('cashless'),
@@ -39,8 +36,7 @@ export default function Services() {
       icon: Droplet,
       bgColor: "bg-green-900",
       textColor: "text-white",
-      iconBg: "bg-accent",
-      iconColor: "text-gray-900"
+      iconColor: "text-accent"
     },
     {
       title: t('irrigation'),
@@ -48,8 +44,7 @@ export default function Services() {
       icon: Droplets,
       bgColor: "bg-green-900",
       textColor: "text-white",
-      iconBg: "bg-accent",
-      iconColor: "text-gray-900"
+      iconColor: "text-accent"
     },
    
     {
@@ -58,8 +53,7 @@ export default function Services() {
       icon: Flower2 ,
       bgColor: "bg-accent",
       textColor: "text-green-900",
-      iconBg: "bg-green-900",
-      iconColor: "text-white"
+      iconColor: "text-primary"
     },
     {
       title: t('greenroof'),
@@ -67,8 +61,7 @@ export default function Services() {
       icon: Sprout ,
       bgColor: "bg-green-900",
       textColor: "text-white",
-      iconBg: "bg-accent",
-      iconColor: "text-gray-900"
+      iconColor: "text-accent"
     }
     
   ];
@@ -125,7 +118,7 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className={`absolute bottom-6 right-6 ${method.iconBg} ${method.iconColor} w-12 h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`absolute bottom-6 right-6  ${method.iconColor} w-12 h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <ArrowRight size={20} />
                 </div>
 

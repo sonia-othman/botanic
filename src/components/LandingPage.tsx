@@ -8,7 +8,6 @@ import { useDirection } from './hooks/useDirection';
 
 export default function LandingPage() {
   const { t, i18n } = useTranslation();
-  
   const { isRTL, direction } = useDirection();
   const [menuOpen, setMenuOpen] = useState(false);
 
