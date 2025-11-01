@@ -90,11 +90,14 @@ export default function LandingPage() {
             {/* Main Content */}
             <div className="space-y-9 mt-6">
               <div className="space-y-10">
-                <h1
-                  className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight ${isRTL ? 'text-right' : 'text-left'}`}
-                >
-                  {t('headline1')}<br />{t('headline2')}
+               <div className="space-y-4">
+                <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight ${isRTL ? 'text-right' : 'text-left'}`}>
+                  {t('headline1')}
                 </h1>
+                <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight ${isRTL ? 'text-right' : 'text-left'}`}>
+                  {t('headline2')}
+                </h1>
+              </div>
                 <p
                   className={`text-gray-600 text-sm sm:text-base max-w-md leading-relaxed ${isRTL ? 'text-right' : 'text-left'}`}
                 >

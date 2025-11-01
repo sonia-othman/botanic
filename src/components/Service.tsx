@@ -66,23 +66,6 @@ export default function Services() {
     
   ];
 
-  const steps = [
-    {
-      number: "01",
-      title: t('Consultation'),
-      description: t('discuss')
-    },
-    {
-      number: "02",
-      title: t('Construction'),
-      description: t('team')
-    },
-    {
-      number: "03",
-      title: t("Completion"),
-      description: t('completed')
-    }
-  ];
 
   return (
     <div className="bg-white rounded-4xl py-20">

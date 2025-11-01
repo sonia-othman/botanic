@@ -12,10 +12,10 @@ i18n
       en: { translation: en },
       ku: { translation: ku },
     },
-    lng: 'en', // default language
-    fallbackLng: 'en',
+    lng: 'ku',
+    fallbackLng: 'ku',
     interpolation: {
-      escapeValue: false, // react already escapes
+      escapeValue: false, 
     },
   });
 
