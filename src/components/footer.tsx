@@ -23,6 +23,7 @@ export default function Footer() {
       { name: t('footers.navigation.home'), href: '/' },
       { name: t('footers.navigation.gallery'), href: '/gallery' },
       { name: t('footers.navigation.showroom'), href: '/showroom' },
+      { name: t('footers.navigation.constraction'), href: '/contact' },
       { name: t('footers.navigation.about'), href: '/about' },
       { name: t('footers.navigation.contact'), href: '/contact' },
     ],

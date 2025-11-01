@@ -437,17 +437,18 @@
   "footers": {
     "navigation": {
       "home": "سەرەکی",
-      "gallery": "گەلەری",
-      "showroom": "هۆڵی پیشاندان",
+      "gallery": "لاندسکەیپ",
+      "showroom": "شۆوڕووم",
       "about": "دەربارەی ئێمە",
-      "contact": "پەیوەندی"
+      "contact": "پەیوەندی",
+      "constraction": "بیناسازی"
     },
     "services": {
       "landscapeDesign": "دیزاینی باخچە",
-      "greenRoof": "سیستەمی سەربانی سەوز",
+      "greenRoof": "سیستەمی سەقفی سەوز",
       "irrigation": "سیستەمی ئاودان",
       "artificialPlants": "ڕووەکی دەستکرد",
-      "waterproofing": "دژ به ئاو"
+      "waterproofing": "دژه ئاو"
     },
     "company": {
       "description": "گۆڕینی شوێنەکان بە چارەسەری نوێی باخچەوانی لە ساڵی ٢٠١٢ەوە. هاوبەشی متمانەپێکراوتان بۆ ژینگەی سەوز لە عێراق."
