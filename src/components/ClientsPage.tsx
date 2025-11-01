@@ -66,51 +66,59 @@ export default function ClientsPage() {
         </div>
 
         {/* RIGHT SLIDER SECTION */}
-        <div className="relative w-full">
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
-            navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
-            breakpoints={{ 480: { slidesPerView: 1.2 }, 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
-            className="pb-10"
-            dir={isRTL ? "rtl" : "ltr"}
-            key={direction}
-          >
-            {properties.map((property, index) => (
-              <SwiperSlide key={index}>
-                <div className="group relative rounded-2xl bg-white overflow-hidden transition-all duration-300 flex flex-col h-[300px] sm:h-[340px] md:h-[360px]">
-                  <div className="h-48 sm:h-52 w-full overflow-hidden flex justify-center items-center">
-                    <img
-                      src={property.image}
-                      alt={t(property.titleKey)}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className={`flex-1 p-4 sm:p-5 flex flex-col justify-between ${isRTL ? "text-right" : "text-left"}`}>
-                    <h3 className="text-center text-md sm:text-lg text-primary font-medium">
-                      {t(property.titleKey)}
-                    </h3>
-                    <p className="text-center text-sm text-gray-600 mt-1">{t(property.countKey)}</p>
-                  </div>
+      <div className="relative w-full">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          navigation={{
+            nextEl: isRTL ? ".custom-prev" : ".custom-next",
+            prevEl: isRTL ? ".custom-next" : ".custom-prev",
+          }}
+          breakpoints={{ 480: { slidesPerView: 1.2 }, 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+          className="pb-10"
+          dir={isRTL ? "rtl" : "ltr"}
+          key={direction} // forces re-render on language change
+        >
+          {properties.map((property, index) => (
+            <SwiperSlide key={index}>
+              <div className="group relative rounded-2xl bg-white overflow-hidden transition-all duration-300 flex flex-col h-[300px] sm:h-[340px] md:h-[360px]">
+                <div className="h-48 sm:h-52 w-full overflow-hidden flex justify-center items-center">
+                  <img
+                    src={property.image}
+                    alt={t(property.titleKey)}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                <div className={`flex-1 p-4 sm:p-5 flex flex-col justify-between ${isRTL ? "text-right" : "text-left"}`}>
+                  <h3 className="text-center text-md sm:text-lg text-primary font-medium">
+                    {t(property.titleKey)}
+                  </h3>
+                  <p className="text-center text-sm text-gray-600 mt-1">{t(property.countKey)}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-          {/* Navigation Buttons */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 mt-4 sm:mt-6">
-            <button className={`custom-prev w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-white border border-gray-300 hover:bg-gray-100 transition ${isRTL ? "order-2" : "order-1"}`}>
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-            </button>
+        {/* Navigation Buttons */}
+        <div className="flex items-center justify-center gap-4 sm:gap-6 mt-4 sm:mt-6">
+          <button
+            className={`custom-prev w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-white border border-gray-300 hover:bg-gray-100 transition ${isRTL ? "order-2" : "order-1"}`}
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+          </button>
 
-            <button className={`custom-next w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-white border border-gray-300 hover:bg-gray-100 transition ${isRTL ? "order-1" : "order-2"}`}>
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-            </button>
-          </div>
+          <button
+            className={`custom-next w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-white border border-gray-300 hover:bg-gray-100 transition ${isRTL ? "order-1" : "order-2"}`}
+          >
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+          </button>
         </div>
+      </div>
+
       </div>
     </section>
   );
